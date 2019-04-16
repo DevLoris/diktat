@@ -18,7 +18,19 @@
 		D285950B2265CEF000A967C8 /* ImageNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595072265CEF000A967C8 /* ImageNodeLayer.swift */; };
 		D285950C2265CEF000A967C8 /* ImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595082265CEF000A967C8 /* ImageNode.swift */; };
 		D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595092265CEF000A967C8 /* VideoNodeLayer.swift */; };
+		D28595162265F89900A967C8 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595152265F89900A967C8 /* UnitConverter.swift */; };
+		D28595212265F9EF00A967C8 /* DiktatBeautyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D28595232265F9EF00A967C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D28594DE2265CBF400A967C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D28594E52265CBF400A967C8;
+			remoteInfo = DiktatBeauty;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D28594E62265CBF400A967C8 /* DiktatBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiktatBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,10 +46,21 @@
 		D28595072265CEF000A967C8 /* ImageNodeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNodeLayer.swift; sourceTree = "<group>"; };
 		D28595082265CEF000A967C8 /* ImageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNode.swift; sourceTree = "<group>"; };
 		D28595092265CEF000A967C8 /* VideoNodeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoNodeLayer.swift; sourceTree = "<group>"; };
+		D28595152265F89900A967C8 /* UnitConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverter.swift; sourceTree = "<group>"; };
+		D285951E2265F9EF00A967C8 /* DiktatBeautyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiktatBeautyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiktatBeautyTests.swift; sourceTree = "<group>"; };
+		D28595222265F9EF00A967C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D28594E32265CBF400A967C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D285951B2265F9EF00A967C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				D28594E82265CBF400A967C8 /* DiktatBeauty */,
+				D285951F2265F9EF00A967C8 /* DiktatBeautyTests */,
 				D28594E72265CBF400A967C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				D28594E62265CBF400A967C8 /* DiktatBeauty.app */,
+				D285951E2265F9EF00A967C8 /* DiktatBeautyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +103,7 @@
 		D28594FB2265CC1D00A967C8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D285950E2265D7F200A967C8 /* History */,
 				D28594FE2265CC4700A967C8 /* AR */,
 			);
 			path = Features;
@@ -86,6 +112,7 @@
 		D28594FC2265CC2500A967C8 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				D28595132265F88000A967C8 /* Utils */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -138,6 +165,62 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		D285950E2265D7F200A967C8 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				D28595122265D81400A967C8 /* ViewControllers */,
+				D28595112265D81000A967C8 /* UI */,
+				D28595102265D80B00A967C8 /* Models */,
+				D285950F2265D80100A967C8 /* Services */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		D285950F2265D80100A967C8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D28595102265D80B00A967C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D28595112265D81000A967C8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		D28595122265D81400A967C8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D28595132265F88000A967C8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D28595152265F89900A967C8 /* UnitConverter.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D285951F2265F9EF00A967C8 /* DiktatBeautyTests */ = {
+			isa = PBXGroup;
+			children = (
+				D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */,
+				D28595222265F9EF00A967C8 /* Info.plist */,
+			);
+			path = DiktatBeautyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,6 +241,24 @@
 			productReference = D28594E62265CBF400A967C8 /* DiktatBeauty.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D285951D2265F9EF00A967C8 /* DiktatBeautyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D28595252265F9EF00A967C8 /* Build configuration list for PBXNativeTarget "DiktatBeautyTests" */;
+			buildPhases = (
+				D285951A2265F9EF00A967C8 /* Sources */,
+				D285951B2265F9EF00A967C8 /* Frameworks */,
+				D285951C2265F9EF00A967C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D28595242265F9EF00A967C8 /* PBXTargetDependency */,
+			);
+			name = DiktatBeautyTests;
+			productName = DiktatBeautyTests;
+			productReference = D285951E2265F9EF00A967C8 /* DiktatBeautyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -170,6 +271,10 @@
 				TargetAttributes = {
 					D28594E52265CBF400A967C8 = {
 						CreatedOnToolsVersion = 10.2;
+					};
+					D285951D2265F9EF00A967C8 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = D28594E52265CBF400A967C8;
 					};
 				};
 			};
@@ -187,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				D28594E52265CBF400A967C8 /* DiktatBeauty */,
+				D285951D2265F9EF00A967C8 /* DiktatBeautyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +305,13 @@
 				D28594F42265CBF500A967C8 /* LaunchScreen.storyboard in Resources */,
 				D28594F12265CBF500A967C8 /* Assets.xcassets in Resources */,
 				D28594EF2265CBF400A967C8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D285951C2265F9EF00A967C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,12 +328,29 @@
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,
 				D28594EC2265CBF400A967C8 /* ViewController.swift in Sources */,
 				D285950B2265CEF000A967C8 /* ImageNodeLayer.swift in Sources */,
+				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D285951A2265F9EF00A967C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D28595212265F9EF00A967C8 /* DiktatBeautyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D28595242265F9EF00A967C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D28594E52265CBF400A967C8 /* DiktatBeauty */;
+			targetProxy = D28595232265F9EF00A967C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D28594ED2265CBF400A967C8 /* Main.storyboard */ = {
@@ -394,6 +524,46 @@
 			};
 			name = Release;
 		};
+		D28595262265F9EF00A967C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5P2JB4N3W3;
+				INFOPLIST_FILE = DiktatBeautyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeautyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiktatBeauty.app/DiktatBeauty";
+			};
+			name = Debug;
+		};
+		D28595272265F9EF00A967C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5P2JB4N3W3;
+				INFOPLIST_FILE = DiktatBeautyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeautyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiktatBeauty.app/DiktatBeauty";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -411,6 +581,15 @@
 			buildConfigurations = (
 				D28594F92265CBF500A967C8 /* Debug */,
 				D28594FA2265CBF500A967C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D28595252265F9EF00A967C8 /* Build configuration list for PBXNativeTarget "DiktatBeautyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D28595262265F9EF00A967C8 /* Debug */,
+				D28595272265F9EF00A967C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
