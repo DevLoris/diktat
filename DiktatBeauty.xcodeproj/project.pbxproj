@@ -12,6 +12,12 @@
 		D28594EF2265CBF400A967C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28594ED2265CBF400A967C8 /* Main.storyboard */; };
 		D28594F12265CBF500A967C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D28594F02265CBF500A967C8 /* Assets.xcassets */; };
 		D28594F42265CBF500A967C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28594F22265CBF500A967C8 /* LaunchScreen.storyboard */; };
+		D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595022265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift */; };
+		D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595042265CD9800A967C8 /* ViewController+ARSessionDelegate.swift */; };
+		D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595062265CEF000A967C8 /* ImageGifNodeLayer.swift */; };
+		D285950B2265CEF000A967C8 /* ImageNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595072265CEF000A967C8 /* ImageNodeLayer.swift */; };
+		D285950C2265CEF000A967C8 /* ImageNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595082265CEF000A967C8 /* ImageNode.swift */; };
+		D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595092265CEF000A967C8 /* VideoNodeLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		D28594F02265CBF500A967C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D28594F32265CBF500A967C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D28594F52265CBF500A967C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D28595022265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		D28595042265CD9800A967C8 /* ViewController+ARSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSessionDelegate.swift"; sourceTree = "<group>"; };
+		D28595062265CEF000A967C8 /* ImageGifNodeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageGifNodeLayer.swift; sourceTree = "<group>"; };
+		D28595072265CEF000A967C8 /* ImageNodeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNodeLayer.swift; sourceTree = "<group>"; };
+		D28595082265CEF000A967C8 /* ImageNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageNode.swift; sourceTree = "<group>"; };
+		D28595092265CEF000A967C8 /* VideoNodeLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoNodeLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,76 @@
 		D28594E82265CBF400A967C8 /* DiktatBeauty */ = {
 			isa = PBXGroup;
 			children = (
-				D28594E92265CBF400A967C8 /* AppDelegate.swift */,
-				D28594EB2265CBF400A967C8 /* ViewController.swift */,
-				D28594ED2265CBF400A967C8 /* Main.storyboard */,
-				D28594F02265CBF500A967C8 /* Assets.xcassets */,
-				D28594F22265CBF500A967C8 /* LaunchScreen.storyboard */,
 				D28594F52265CBF500A967C8 /* Info.plist */,
+				D28594FD2265CC2B00A967C8 /* Resources */,
+				D28594FC2265CC2500A967C8 /* Global */,
+				D28594FB2265CC1D00A967C8 /* Features */,
+				D28594E92265CBF400A967C8 /* AppDelegate.swift */,
 			);
 			path = DiktatBeauty;
+			sourceTree = "<group>";
+		};
+		D28594FB2265CC1D00A967C8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D28594FE2265CC4700A967C8 /* AR */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D28594FC2265CC2500A967C8 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		D28594FD2265CC2B00A967C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D28594F02265CBF500A967C8 /* Assets.xcassets */,
+				D28594F22265CBF500A967C8 /* LaunchScreen.storyboard */,
+				D28594ED2265CBF400A967C8 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D28594FE2265CC4700A967C8 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				D28595012265CC6700A967C8 /* Services */,
+				D28595002265CC5D00A967C8 /* Models */,
+				D28594FF2265CC5400A967C8 /* ViewControllers */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		D28594FF2265CC5400A967C8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D28594EB2265CBF400A967C8 /* ViewController.swift */,
+				D28595022265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift */,
+				D28595042265CD9800A967C8 /* ViewController+ARSessionDelegate.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D28595002265CC5D00A967C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D28595062265CEF000A967C8 /* ImageGifNodeLayer.swift */,
+				D28595082265CEF000A967C8 /* ImageNode.swift */,
+				D28595072265CEF000A967C8 /* ImageNodeLayer.swift */,
+				D28595092265CEF000A967C8 /* VideoNodeLayer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D28595012265CC6700A967C8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +209,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D285950C2265CEF000A967C8 /* ImageNode.swift in Sources */,
+				D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */,
+				D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */,
+				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,
 				D28594EC2265CBF400A967C8 /* ViewController.swift in Sources */,
+				D285950B2265CEF000A967C8 /* ImageNodeLayer.swift in Sources */,
+				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5P2JB4N3W3;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5P2JB4N3W3;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
