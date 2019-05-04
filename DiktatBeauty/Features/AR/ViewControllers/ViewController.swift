@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageNameLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
     
+    var actualNode:String? = nil
+    
     let updateQueue = DispatchQueue(label: Bundle.main.bundleIdentifier! +
         ".serialSceneKitQueue")
     
@@ -34,13 +36,16 @@ class ViewController: UIViewController {
     
     var isRestartAvailable = true
     
-    let imgNode = ImageNode(layers: [
-        ImageNodeLayer(material_name: "test-1", position: SCNVector3(0, 0.05, 0)),
-        ImageNodeLayer(material_name: "test-2", position: SCNVector3(0, 0.10, 0)),
-        ImageNodeLayer(material_name: "test-3", position: SCNVector3(0, 0.15, 0)),
+    let nodes:[String:ImageNode] = [
+        "test" : ImageNode(layers: [
+            ImageNodeLayer(identifier: "background", material_name: "test-1", position: ARPosition(positionType: .RELATIVE, x: 0, y: 0.05, z: 0), size: ARSize(3, 1)),
+            ImageNodeLayer(identifier: "left-image", material_name: "test-2", position: ARPosition(positionType: .RELATIVE, x: -0.66, y: 0.1, z: 0), size: ARSize(1,1)),
+            ImageNodeLayer(identifier: "right-star", material_name: "test-3", position: ARPosition(positionType: .ABSOLUTE, x: 0.66, y: 0.15, z: 0), size: ARSize(1, 1)),
+            ImageNodeLayer(identifier: "right-image", material_name: "test-30240", position: ARPosition(positionType: .RELATIVE, x: 0.66, y: 0.1, z: 0), size: ARSize(1,1)),
+            ImageNodeLayer(identifier: "left-star", material_name: "test-3", position: ARPosition(positionType: .ABSOLUTE, x: -0.66, y: 0.15, z: 0), size: ARSize(1, 1)),
+            ImageNodeLayer(identifier: "logo-pikaend", material_name: "PIKAEND", position: ARPosition(positionType: .ABSOLUTE, x: 0, y: 0.25, z: 0), size: ARSize(0.6, 0.6)),
         //   VideoNodeLayer(material_name: "video", position: SCNVector3(0, 0, 0))
-        ]);
-    
-    
+        ])
+    ] 
 }
 

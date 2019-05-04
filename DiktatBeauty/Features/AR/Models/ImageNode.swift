@@ -30,12 +30,17 @@ class ImageNode {
         
         return nodes;
     }
+    
+    func getLayers() -> [CustomNodeLayer]? {
+        return self.layers
+    }
 }
 
 protocol CustomNodeLayer {
+    var identifier: String { get set }
     var material_name: String { get set }
     var opacity: Float { get set }
-    var position : SCNVector3  { get set }
+    var position : ARPosition  { get set }
     var rotation : SCNVector4  { get set }
     
     func createNode(parent: ARReferenceImage) -> SCNNode;

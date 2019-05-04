@@ -13,20 +13,24 @@ import SceneKit
 class ImageGifNodeLayer  :  CustomNodeLayer {
     var material_name: String
     var opacity: Float = 1
-    var position = SCNVector3(0,0,0)
-    var rotation = SCNVector4(0,0,0,0)
+    var position = ARPosition(positionType: .RELATIVE, x: 0, y: 0, z: 0)
+    var rotation = SCNVector4(0, 0, 0, 0)
     var animation:(SCNNode)->() = {x in}
+    var identifier:String
     
-    init(material_name:String) {
+    init(identifier:String, material_name:String) {
         self.material_name = material_name
+        self.identifier = identifier
     }
-    init(material_name:String, position:SCNVector3) {
+    init(identifier:String, material_name:String, position:ARPosition) {
         self.material_name = material_name
         self.position = position
+        self.identifier = identifier
     }
-    init(material_name:String, opacity:Float) {
+    init(identifier:String, material_name:String, opacity:Float) {
         self.material_name = material_name
         self.opacity = opacity
+        self.identifier = identifier
     }
     
     
@@ -56,8 +60,10 @@ class ImageGifNodeLayer  :  CustomNodeLayer {
         //Node
         let plane_node = SCNNode(geometry: scene_plane)
         plane_node.opacity = CGFloat(self.opacity);
-        plane_node.position = self.position
+        plane_node.position = self.position.getLayerPosition(parent: parent)
         plane_node.rotation = self.rotation
+        
+        plane_node.name = self.identifier
         
         plane_node.eulerAngles.x = -.pi / 2
         
@@ -138,5 +144,10 @@ class ImageGifNodeLayer  :  CustomNodeLayer {
         animation.calculationMode = CAAnimationCalculationMode.discrete
         
         return animation;
+    }
+    
+    
+    func getIdentifier() -> String {
+        return identifier;
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
+		D273303A2279B6260028B325 /* ARPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27330392279B6260028B325 /* ARPosition.swift */; };
+		D273303D2279BA1D0028B325 /* ARSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D273303C2279BA1D0028B325 /* ARSize.swift */; };
 		D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28594E92265CBF400A967C8 /* AppDelegate.swift */; };
 		D28594EC2265CBF400A967C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28594EB2265CBF400A967C8 /* ViewController.swift */; };
 		D28594EF2265CBF400A967C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D28594ED2265CBF400A967C8 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchEvent.swift"; sourceTree = "<group>"; };
+		D27330392279B6260028B325 /* ARPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPosition.swift; sourceTree = "<group>"; };
+		D273303C2279BA1D0028B325 /* ARSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSize.swift; sourceTree = "<group>"; };
 		D28594E62265CBF400A967C8 /* DiktatBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiktatBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28594E92265CBF400A967C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D28594EB2265CBF400A967C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +76,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D273303B2279BA0F0028B325 /* ARUtils */ = {
+			isa = PBXGroup;
+			children = (
+				D27330392279B6260028B325 /* ARPosition.swift */,
+				D273303C2279BA1D0028B325 /* ARSize.swift */,
+			);
+			path = ARUtils;
+			sourceTree = "<group>";
+		};
 		D28594DD2265CBF400A967C8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +118,8 @@
 		D28594FB2265CC1D00A967C8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D285950E2265D7F200A967C8 /* History */,
 				D28594FE2265CC4700A967C8 /* AR */,
+				D285950E2265D7F200A967C8 /* History */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -143,6 +158,7 @@
 				D28594EB2265CBF400A967C8 /* ViewController.swift */,
 				D28595022265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift */,
 				D28595042265CD9800A967C8 /* ViewController+ARSessionDelegate.swift */,
+				D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -150,6 +166,7 @@
 		D28595002265CC5D00A967C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D273303B2279BA0F0028B325 /* ARUtils */,
 				D28595062265CEF000A967C8 /* ImageGifNodeLayer.swift */,
 				D28595082265CEF000A967C8 /* ImageNode.swift */,
 				D28595072265CEF000A967C8 /* ImageNodeLayer.swift */,
@@ -322,11 +339,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D273303D2279BA1D0028B325 /* ARSize.swift in Sources */,
 				D285950C2265CEF000A967C8 /* ImageNode.swift in Sources */,
 				D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */,
 				D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,
+				D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */,
 				D28594EC2265CBF400A967C8 /* ViewController.swift in Sources */,
+				D273303A2279B6260028B325 /* ARPosition.swift in Sources */,
 				D285950B2265CEF000A967C8 /* ImageNodeLayer.swift in Sources */,
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,

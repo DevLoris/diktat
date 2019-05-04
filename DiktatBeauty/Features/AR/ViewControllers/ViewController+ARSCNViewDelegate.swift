@@ -54,15 +54,19 @@ extension ViewController : ARSCNViewDelegate {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
         DispatchQueue.main.async {
-            
-            self.imgNode.createNodes(parent: referenceImage).forEach { n in
-                node.addChildNode(n);
+            if let name = referenceImage.name {
+                if let imgNode = self.nodes[name] {
+                    imgNode.createNodes(parent: referenceImage).forEach { n in
+                        node.addChildNode(n);
+                    }
+                }
             }
         }
         
         DispatchQueue.main.async {
             let imageName = referenceImage.name ?? ""
-            self.imageNameLabel.text = imageName;
+            self.imageNameLabel.text = imageName
+            self.actualNode = imageName
         }
     }
     
