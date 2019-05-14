@@ -25,7 +25,9 @@ class ImageNode {
         var nodes:[SCNNode] = [];
         
         self.layers?.forEach {  node in
-            nodes.append(node.createNode(parent: parent))
+            if let n = node.createNode(parent: parent) {
+                nodes.append(n)
+            }
         }
         
         return nodes;
@@ -34,37 +36,10 @@ class ImageNode {
     func getLayers() -> [CustomNodeLayer]? {
         return self.layers
     }
-}
-
-protocol CustomNodeLayer {
-    var identifier: String { get set }
-    var material_name: String { get set }
-    var opacity: Float { get set }
-    var position : ARPosition  { get set }
-    var rotation : SCNVector4  { get set }
     
-    func createNode(parent: ARReferenceImage) -> SCNNode;
-    
+    func getLayerById(identifier:String) -> CustomNodeLayer? {
+        return self.layers?.first(where: { (p) -> Bool in
+            return p.identifier == identifier
+        })
+    }
 }
-
-
-/*
- let material = SCNMaterial();
- material.diffuse.contents = UIImage(named: "OK");
- 
- let material_devil = SCNMaterial();
- material_devil.diffuse.contents = UIImage(named: "devil");
- 
- // Create a plane to visualize the initial position of the detected image.
- let plane = SCNPlane(width: referenceImage.physicalSize.width,
- height: referenceImage.physicalSize.height)
- let planeNode = SCNNode(geometry: plane)
- plane.materials = [material];
- 
- planeNode.opacity = 0.9
- planeNode.eulerAngles.x = -.pi / 2
- 
- 
- 
- node.addChildNode(planeNode)
- */

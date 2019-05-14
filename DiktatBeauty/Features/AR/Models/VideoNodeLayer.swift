@@ -11,31 +11,10 @@ import ARKit
 import SceneKit
 
 class VideoNodeLayer :  CustomNodeLayer {
-    var material_name: String
-    var opacity: Float = 0
-    var position = ARPosition(positionType: .RELATIVE, x: 0, y: 0, z: 0)
-    var rotation = SCNVector4(0,0,0,0)
     var animation:(SCNNode)->() = {x in}
-    var identifier: String
     
     
-    init(identifier:String, material_name:String) {
-        self.identifier = identifier
-        self.material_name = material_name
-    }
-    init(identifier:String, material_name:String, position:ARPosition) {
-        self.identifier = identifier
-        self.material_name = material_name
-        self.position = position
-    }
-    init(identifier:String, material_name:String, opacity:Float) {
-        self.identifier = identifier
-        self.material_name = material_name
-        self.opacity = opacity
-    }
-    
-    
-    func createNode(parent: ARReferenceImage) -> SCNNode{
+    override func createNode(parent: ARReferenceImage) -> SCNNode{
         let videoNode = SKVideoNode(fileNamed: "test.mp4")
         
         let skScene = SKScene(size: CGSize(width: 640, height: 480))

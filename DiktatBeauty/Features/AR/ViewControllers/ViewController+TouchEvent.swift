@@ -29,17 +29,17 @@ extension ViewController {
          - Itére les calques pour trouver l'événement qui correspond à l'identifier
          - Applique et lance le click Event
         */
-        if let actual = actualNode {
-            if let nodes = self.nodes[actual] {
-                if let layers = nodes.getLayers() {
-                    for node in layers {
-                        if node.identifier == nodeName {
-                            if let imageNode = node as? ImageNodeLayer {
-                                imageNode.clickEvent(hitNode)
-                            }
-                        }
-                    }
-                }
+        
+        guard
+            let actual = actualNode,
+            let nodes = self.nodes[actual],
+            let layers = nodes.getLayers()
+        else {
+            return
+        }
+        for node in layers {
+            if node.identifier == nodeName, let imageNode = node as? ImageNodeLayer {
+                imageNode.clickEvent(hitNode)
             }
         }
     }

@@ -5,6 +5,9 @@
   },
   "resources" : [
     {
+      "filename" : "anorexia.arreferenceimage"
+    },
+    {
       "filename" : "test.arreferenceimage"
     }
   ]

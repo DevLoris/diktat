@@ -22,19 +22,19 @@ class ARPosition  {
     var y:Float = 0
     var z:Float = 0
     
-    init(positionType:ARPositionType, x:Float, y:Float, z:Float) {
+    init(_ positionType:ARPositionType, _ x:Float, _ y:Float, _ z:Float) {
         self.x = x
         self.y = y
         self.z = z
         self.positionType = positionType
     }
     
-    func getLayerPosition(parent: ARReferenceImage) -> SCNVector3 {
+    func getLayerPosition(parent: ARReferenceImage, onInit : Bool = false) -> SCNVector3 {
         if positionType == .RELATIVE {
-            return SCNVector3(x*Float(parent.physicalSize.width), y, z*Float(parent.physicalSize.height))
+            return SCNVector3(x*Float(parent.physicalSize.width), (onInit) ? 0 : y, z*Float(parent.physicalSize.height))
         }
         
-        return SCNVector3(x, y, z)
+        return SCNVector3(x, (onInit) ? 0 : y, z)
 
     }
 }

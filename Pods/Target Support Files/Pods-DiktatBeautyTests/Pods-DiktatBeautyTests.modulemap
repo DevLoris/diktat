@@ -1,0 +1,6 @@
+framework module Pods_DiktatBeautyTests {
+  umbrella header "Pods-DiktatBeautyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

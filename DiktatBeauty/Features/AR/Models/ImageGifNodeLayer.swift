@@ -11,30 +11,10 @@ import ARKit
 import SceneKit
 
 class ImageGifNodeLayer  :  CustomNodeLayer {
-    var material_name: String
-    var opacity: Float = 1
-    var position = ARPosition(positionType: .RELATIVE, x: 0, y: 0, z: 0)
-    var rotation = SCNVector4(0, 0, 0, 0)
     var animation:(SCNNode)->() = {x in}
-    var identifier:String
-    
-    init(identifier:String, material_name:String) {
-        self.material_name = material_name
-        self.identifier = identifier
-    }
-    init(identifier:String, material_name:String, position:ARPosition) {
-        self.material_name = material_name
-        self.position = position
-        self.identifier = identifier
-    }
-    init(identifier:String, material_name:String, opacity:Float) {
-        self.material_name = material_name
-        self.opacity = opacity
-        self.identifier = identifier
-    }
     
     
-    func createNode(parent: ARReferenceImage) -> SCNNode{
+    override func createNode(parent: ARReferenceImage) -> SCNNode{
         
         let scene_plane = SCNPlane(width: parent.physicalSize.width,
                                    height: parent.physicalSize.height)
@@ -45,7 +25,7 @@ class ImageGifNodeLayer  :  CustomNodeLayer {
         
         
         let layer = CALayer()
-        layer.bounds = CGRect(x: 00, y: 00, width: 400, height: 400)
+        layer.bounds = CGRect(x: 00, y: 00, width: 1000, height: 1000)
         layer.anchorPoint = CGPoint(x:0.0,y:1.0)
         layer.add(animation, forKey: "contents")
         

@@ -53,32 +53,26 @@ extension ViewController : ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
-        DispatchQueue.main.async {
+        
+        DispatchQueue.global(qos: .userInteractive).async {
             if let name = referenceImage.name {
+                
                 if let imgNode = self.nodes[name] {
-                    imgNode.createNodes(parent: referenceImage).forEach { n in
-                        node.addChildNode(n);
-                    }
+                    let generatedNodes = imgNode.createNodes(parent: referenceImage)
+                    renderer.prepare(generatedNodes, completionHandler: { n in
+                            generatedNodes.forEach { n in
+                                DispatchQueue.main.async {
+                                    node.addChildNode(n);
+                                }
+                            }
+                    })
                 }
             }
-        }
-        
-        DispatchQueue.main.async {
+            
+            
             let imageName = referenceImage.name ?? ""
             self.imageNameLabel.text = imageName
             self.actualNode = imageName
         }
-    }
-    
-    var imageHighlightAction: SCNAction {
-        return .sequence([
-            .wait(duration: 0.25),
-            .fadeOpacity(to: 0.85, duration: 0.25),
-            .fadeOpacity(to: 0.15, duration: 0.25),
-            
-            .fadeOpacity(to: 0.85, duration: 0.25)   /*,
-             .fadeOut(duration: 0.5),
-             .removeFromParentNode()*/
-            ])
     }
 }

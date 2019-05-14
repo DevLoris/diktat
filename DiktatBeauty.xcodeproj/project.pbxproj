@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0830474315252ABA7B9A457F /* Pods_DiktatBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */; };
+		64BB44E93F7B634818FEF4C5 /* Pods_DiktatBeautyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */; };
 		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
 		D273303A2279B6260028B325 /* ARPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27330392279B6260028B325 /* ARPosition.swift */; };
 		D273303D2279BA1D0028B325 /* ARSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D273303C2279BA1D0028B325 /* ARSize.swift */; };
@@ -23,6 +25,8 @@
 		D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595092265CEF000A967C8 /* VideoNodeLayer.swift */; };
 		D28595162265F89900A967C8 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595152265F89900A967C8 /* UnitConverter.swift */; };
 		D28595212265F9EF00A967C8 /* DiktatBeautyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */; };
+		D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */; };
+		D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = D2D0D9F5228AAFA400B32B24 /* test.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09002E0E9E74B9EFF6F320E2 /* Pods-DiktatBeauty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeauty.release.xcconfig"; path = "Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty.release.xcconfig"; sourceTree = "<group>"; };
+		2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.release.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.release.xcconfig"; sourceTree = "<group>"; };
+		371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeautyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeauty.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty.debug.xcconfig"; sourceTree = "<group>"; };
+		C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchEvent.swift"; sourceTree = "<group>"; };
 		D27330392279B6260028B325 /* ARPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPosition.swift; sourceTree = "<group>"; };
 		D273303C2279BA1D0028B325 /* ARSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSize.swift; sourceTree = "<group>"; };
@@ -56,6 +66,8 @@
 		D285951E2265F9EF00A967C8 /* DiktatBeautyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiktatBeautyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiktatBeautyTests.swift; sourceTree = "<group>"; };
 		D28595222265F9EF00A967C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNodeLayer.swift; sourceTree = "<group>"; };
+		D2D0D9F5228AAFA400B32B24 /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0830474315252ABA7B9A457F /* Pods_DiktatBeauty.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +83,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BB44E93F7B634818FEF4C5 /* Pods_DiktatBeautyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01048FAD39F6E7ECBA0C28E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */,
+				371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80CBCFDF7F6F7BDA238B548B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */,
+				09002E0E9E74B9EFF6F320E2 /* Pods-DiktatBeauty.release.xcconfig */,
+				8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */,
+				2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D273303B2279BA0F0028B325 /* ARUtils */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +126,8 @@
 				D28594E82265CBF400A967C8 /* DiktatBeauty */,
 				D285951F2265F9EF00A967C8 /* DiktatBeautyTests */,
 				D28594E72265CBF400A967C8 /* Products */,
+				80CBCFDF7F6F7BDA238B548B /* Pods */,
+				01048FAD39F6E7ECBA0C28E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +172,7 @@
 		D28594FD2265CC2B00A967C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2D0D9F5228AAFA400B32B24 /* test.gif */,
 				D28594F02265CBF500A967C8 /* Assets.xcassets */,
 				D28594F22265CBF500A967C8 /* LaunchScreen.storyboard */,
 				D28594ED2265CBF400A967C8 /* Main.storyboard */,
@@ -171,6 +209,7 @@
 				D28595082265CEF000A967C8 /* ImageNode.swift */,
 				D28595072265CEF000A967C8 /* ImageNodeLayer.swift */,
 				D28595092265CEF000A967C8 /* VideoNodeLayer.swift */,
+				D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,9 +284,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D28594F82265CBF500A967C8 /* Build configuration list for PBXNativeTarget "DiktatBeauty" */;
 			buildPhases = (
+				FE9B56E8F005E6771169EF3D /* [CP] Check Pods Manifest.lock */,
 				D28594E22265CBF400A967C8 /* Sources */,
 				D28594E32265CBF400A967C8 /* Frameworks */,
 				D28594E42265CBF400A967C8 /* Resources */,
+				68CF7C104D27876190A25D4F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +303,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D28595252265F9EF00A967C8 /* Build configuration list for PBXNativeTarget "DiktatBeautyTests" */;
 			buildPhases = (
+				5D41786E6AA98153517CBFB6 /* [CP] Check Pods Manifest.lock */,
 				D285951A2265F9EF00A967C8 /* Sources */,
 				D285951B2265F9EF00A967C8 /* Frameworks */,
 				D285951C2265F9EF00A967C8 /* Resources */,
@@ -319,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */,
 				D28594F42265CBF500A967C8 /* LaunchScreen.storyboard in Resources */,
 				D28594F12265CBF500A967C8 /* Assets.xcassets in Resources */,
 				D28594EF2265CBF400A967C8 /* Main.storyboard in Resources */,
@@ -333,6 +376,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D41786E6AA98153517CBFB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiktatBeautyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68CF7C104D27876190A25D4F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE9B56E8F005E6771169EF3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiktatBeauty-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D28594E22265CBF400A967C8 /* Sources */ = {
@@ -351,6 +465,7 @@
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
+				D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,6 +625,7 @@
 		};
 		D28594F92265CBF500A967C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +644,7 @@
 		};
 		D28594FA2265CBF500A967C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09002E0E9E74B9EFF6F320E2 /* Pods-DiktatBeauty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +663,7 @@
 		};
 		D28595262265F9EF00A967C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -566,6 +684,7 @@
 		};
 		D28595272265F9EF00A967C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
