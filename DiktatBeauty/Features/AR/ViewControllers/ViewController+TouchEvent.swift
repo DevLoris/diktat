@@ -32,14 +32,14 @@ extension ViewController {
         
         guard
             let actual = actualNode,
-            let nodes = self.nodes[actual],
+            let nodes = Recognitazed.instance.nodes[actual],
             let layers = nodes.getLayers()
         else {
             return
         }
         for node in layers {
-            if node.identifier == nodeName, let imageNode = node as? ImageNodeLayer {
-                imageNode.clickEvent(hitNode)
+            if node.identifier == nodeName {
+                node.touchEvent(parent: nodes)
             }
         }
     }

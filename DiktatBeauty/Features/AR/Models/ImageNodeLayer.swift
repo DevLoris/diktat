@@ -12,8 +12,7 @@ import SceneKit
 
 class ImageNodeLayer  :  CustomNodeLayer {
    
-    var animation:(SCNNode)->() = {x in}
-    var clickEvent:(SCNNode)->() = {x in print(x.name ?? "??")}
+    var animation:(SCNNode)->() = {x in} 
     
     override func createNode(parent: ARReferenceImage) -> SCNNode{
         let scene_plane =  SCNPlane(width: parent.physicalSize.width ,
@@ -31,6 +30,8 @@ class ImageNodeLayer  :  CustomNodeLayer {
         plane_node.rotation = self.rotation
         plane_node.scale = size.getSize()
         
+        plane_node.isHidden = self.hiddenDefault
+        
         //On set le name
         plane_node.name = self.identifier
         
@@ -44,6 +45,8 @@ class ImageNodeLayer  :  CustomNodeLayer {
             plane_node.runAction(action)
         
         }
+        
+        node = plane_node
         
         return plane_node
     }

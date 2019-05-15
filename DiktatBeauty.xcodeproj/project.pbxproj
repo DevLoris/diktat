@@ -10,6 +10,14 @@
 		0830474315252ABA7B9A457F /* Pods_DiktatBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */; };
 		64BB44E93F7B634818FEF4C5 /* Pods_DiktatBeautyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */; };
 		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
+		D24455B8228BEB3000096BE5 /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455B7228BEB3000096BE5 /* TouchEvent.swift */; };
+		D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */; };
+		D24455BC228BECF400096BE5 /* TouchEventEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455BB228BECF400096BE5 /* TouchEventEffects.swift */; };
+		D24455C3228BF63000096BE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455C2228BF63000096BE5 /* NetworkManager.swift */; };
+		D24455C5228BF68200096BE5 /* String+Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455C4228BF68200096BE5 /* String+Url.swift */; };
+		D24455C8228BF79200096BE5 /* NodeObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455C7228BF79200096BE5 /* NodeObject.swift */; };
+		D24455CA228BFFFE00096BE5 /* ConvertToNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455C9228BFFFE00096BE5 /* ConvertToNodeLayer.swift */; };
+		D24455CC228C090E00096BE5 /* Recognitazed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455CB228C090E00096BE5 /* Recognitazed.swift */; };
 		D273303A2279B6260028B325 /* ARPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27330392279B6260028B325 /* ARPosition.swift */; };
 		D273303D2279BA1D0028B325 /* ARSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D273303C2279BA1D0028B325 /* ARSize.swift */; };
 		D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28594E92265CBF400A967C8 /* AppDelegate.swift */; };
@@ -47,6 +55,14 @@
 		B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeauty.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchEvent.swift"; sourceTree = "<group>"; };
+		D24455B7228BEB3000096BE5 /* TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEvent.swift; sourceTree = "<group>"; };
+		D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomNodeLayer+TouchEvent.swift"; sourceTree = "<group>"; };
+		D24455BB228BECF400096BE5 /* TouchEventEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEventEffects.swift; sourceTree = "<group>"; };
+		D24455C2228BF63000096BE5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D24455C4228BF68200096BE5 /* String+Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Url.swift"; sourceTree = "<group>"; };
+		D24455C7228BF79200096BE5 /* NodeObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeObject.swift; sourceTree = "<group>"; };
+		D24455C9228BFFFE00096BE5 /* ConvertToNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToNodeLayer.swift; sourceTree = "<group>"; };
+		D24455CB228C090E00096BE5 /* Recognitazed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognitazed.swift; sourceTree = "<group>"; };
 		D27330392279B6260028B325 /* ARPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPosition.swift; sourceTree = "<group>"; };
 		D273303C2279BA1D0028B325 /* ARSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSize.swift; sourceTree = "<group>"; };
 		D28594E62265CBF400A967C8 /* DiktatBeauty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiktatBeauty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,8 +123,42 @@
 				8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */,
 				2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D24455BD228BF1CD00096BE5 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				D24455C6228BF71400096BE5 /* Models */,
+				D24455BE228BF1E600096BE5 /* Services */,
+				D24455BF228BF1F100096BE5 /* Extensions */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		D24455BE228BF1E600096BE5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D24455C2228BF63000096BE5 /* NetworkManager.swift */,
+				D24455C9228BFFFE00096BE5 /* ConvertToNodeLayer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D24455BF228BF1F100096BE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D24455C4228BF68200096BE5 /* String+Url.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D24455C6228BF71400096BE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D24455C7228BF79200096BE5 /* NodeObject.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D273303B2279BA0F0028B325 /* ARUtils */ = {
@@ -116,6 +166,8 @@
 			children = (
 				D27330392279B6260028B325 /* ARPosition.swift */,
 				D273303C2279BA1D0028B325 /* ARSize.swift */,
+				D24455B7228BEB3000096BE5 /* TouchEvent.swift */,
+				D24455BB228BECF400096BE5 /* TouchEventEffects.swift */,
 			);
 			path = ARUtils;
 			sourceTree = "<group>";
@@ -155,6 +207,7 @@
 		D28594FB2265CC1D00A967C8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D24455BD228BF1CD00096BE5 /* Loader */,
 				D28594FE2265CC4700A967C8 /* AR */,
 				D285950E2265D7F200A967C8 /* History */,
 			);
@@ -210,6 +263,7 @@
 				D28595072265CEF000A967C8 /* ImageNodeLayer.swift */,
 				D28595092265CEF000A967C8 /* VideoNodeLayer.swift */,
 				D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */,
+				D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +271,7 @@
 		D28595012265CC6700A967C8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D24455CB228C090E00096BE5 /* Recognitazed.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -453,18 +508,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D24455C5228BF68200096BE5 /* String+Url.swift in Sources */,
 				D273303D2279BA1D0028B325 /* ARSize.swift in Sources */,
 				D285950C2265CEF000A967C8 /* ImageNode.swift in Sources */,
 				D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */,
 				D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,
+				D24455CA228BFFFE00096BE5 /* ConvertToNodeLayer.swift in Sources */,
 				D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */,
+				D24455CC228C090E00096BE5 /* Recognitazed.swift in Sources */,
 				D28594EC2265CBF400A967C8 /* ViewController.swift in Sources */,
+				D24455BC228BECF400096BE5 /* TouchEventEffects.swift in Sources */,
 				D273303A2279B6260028B325 /* ARPosition.swift in Sources */,
 				D285950B2265CEF000A967C8 /* ImageNodeLayer.swift in Sources */,
+				D24455C3228BF63000096BE5 /* NetworkManager.swift in Sources */,
+				D24455C8228BF79200096BE5 /* NodeObject.swift in Sources */,
+				D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */,
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
+				D24455B8228BEB3000096BE5 /* TouchEvent.swift in Sources */,
 				D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

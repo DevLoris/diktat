@@ -57,7 +57,7 @@ extension ViewController : ARSCNViewDelegate {
         DispatchQueue.global(qos: .userInteractive).async {
             if let name = referenceImage.name {
                 
-                if let imgNode = self.nodes[name] {
+                if let imgNode = Recognitazed.instance.nodes[name] {
                     let generatedNodes = imgNode.createNodes(parent: referenceImage)
                     renderer.prepare(generatedNodes, completionHandler: { n in
                             generatedNodes.forEach { n in

@@ -28,6 +28,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NetworkManager.instance.getJson { (node) in
+            //Check si la node existe bien
+            if let n = node {
+                //On converti la node et on l'ajoute au RECOGNIZATER
+                ConvertToNodeLayer.convertAndPopulate(object: n)
+            }
+        }
+        
         loadSessionDelegate()
         // Do any additional setup after loading the view.
     }

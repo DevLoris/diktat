@@ -11,7 +11,15 @@ import ARKit
 import SceneKit
 
 class ImageNode {
+    var identifier:String = ""
+    var title:String = ""
     var layers:[CustomNodeLayer]?;
+    
+    init(identifier: String, title: String, layers:[CustomNodeLayer]) {
+        self.identifier = identifier
+        self.title = title
+        self.layers = layers;
+    }
     
     init(layers:[CustomNodeLayer]) {
         self.layers = layers;
