@@ -35,6 +35,12 @@
 		D28595212265F9EF00A967C8 /* DiktatBeautyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */; };
 		D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */; };
 		D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = D2D0D9F5228AAFA400B32B24 /* test.gif */; };
+		D2F176F3229927CB007D4841 /* BluuNext-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D2F176F1229927B2007D4841 /* BluuNext-Bold.otf */; };
+		D2F176F4229927CD007D4841 /* BluuNext-Bolditalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = D2F176F2229927B2007D4841 /* BluuNext-Bolditalic.otf */; };
+		D2F176F622992D75007D4841 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176F522992D75007D4841 /* HistoryViewController.swift */; };
+		D2F176F822992E7D007D4841 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176F722992E7D007D4841 /* HistoryCollectionViewCell.swift */; };
+		D2F176FA22992EC9007D4841 /* Historized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176F922992EC9007D4841 /* Historized.swift */; };
+		D2F176FC22992F23007D4841 /* HistoryFormsat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176FB22992F23007D4841 /* HistoryFormsat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +90,12 @@
 		D28595222265F9EF00A967C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNodeLayer.swift; sourceTree = "<group>"; };
 		D2D0D9F5228AAFA400B32B24 /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
+		D2F176F1229927B2007D4841 /* BluuNext-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BluuNext-Bold.otf"; sourceTree = "<group>"; };
+		D2F176F2229927B2007D4841 /* BluuNext-Bolditalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BluuNext-Bolditalic.otf"; sourceTree = "<group>"; };
+		D2F176F522992D75007D4841 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D2F176F722992E7D007D4841 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D2F176F922992EC9007D4841 /* Historized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historized.swift; sourceTree = "<group>"; };
+		D2F176FB22992F23007D4841 /* HistoryFormsat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFormsat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +237,7 @@
 		D28594FD2265CC2B00A967C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D2F176F02299278A007D4841 /* Fonts */,
 				D2D0D9F5228AAFA400B32B24 /* test.gif */,
 				D28594F02265CBF500A967C8 /* Assets.xcassets */,
 				D28594F22265CBF500A967C8 /* LaunchScreen.storyboard */,
@@ -290,6 +303,7 @@
 		D285950F2265D80100A967C8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D2F176F922992EC9007D4841 /* Historized.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -297,6 +311,7 @@
 		D28595102265D80B00A967C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2F176FB22992F23007D4841 /* HistoryFormsat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +319,7 @@
 		D28595112265D81000A967C8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D2F176F722992E7D007D4841 /* HistoryCollectionViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -311,6 +327,7 @@
 		D28595122265D81400A967C8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2F176F522992D75007D4841 /* HistoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +347,15 @@
 				D28595222265F9EF00A967C8 /* Info.plist */,
 			);
 			path = DiktatBeautyTests;
+			sourceTree = "<group>";
+		};
+		D2F176F02299278A007D4841 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D2F176F1229927B2007D4841 /* BluuNext-Bold.otf */,
+				D2F176F2229927B2007D4841 /* BluuNext-Bolditalic.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,8 +443,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */,
+				D2F176F4229927CD007D4841 /* BluuNext-Bolditalic.otf in Resources */,
 				D28594F42265CBF500A967C8 /* LaunchScreen.storyboard in Resources */,
 				D28594F12265CBF500A967C8 /* Assets.xcassets in Resources */,
+				D2F176F3229927CB007D4841 /* BluuNext-Bold.otf in Resources */,
 				D28594EF2265CBF400A967C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +541,8 @@
 				D285950C2265CEF000A967C8 /* ImageNode.swift in Sources */,
 				D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */,
 				D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */,
+				D2F176FC22992F23007D4841 /* HistoryFormsat.swift in Sources */,
+				D2F176F622992D75007D4841 /* HistoryViewController.swift in Sources */,
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,
 				D24455CA228BFFFE00096BE5 /* ConvertToNodeLayer.swift in Sources */,
 				D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */,
@@ -522,6 +552,8 @@
 				D273303A2279B6260028B325 /* ARPosition.swift in Sources */,
 				D285950B2265CEF000A967C8 /* ImageNodeLayer.swift in Sources */,
 				D24455C3228BF63000096BE5 /* NetworkManager.swift in Sources */,
+				D2F176F822992E7D007D4841 /* HistoryCollectionViewCell.swift in Sources */,
+				D2F176FA22992EC9007D4841 /* Historized.swift in Sources */,
 				D24455C8228BF79200096BE5 /* NodeObject.swift in Sources */,
 				D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */,
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,

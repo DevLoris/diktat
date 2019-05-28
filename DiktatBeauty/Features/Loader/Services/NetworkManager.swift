@@ -20,6 +20,10 @@ class NetworkManager {
         }
         
         static let jsonFile = baseUrl + Resources.jsonFile
+        
+        static func getFile(name:String)->String {
+            return "\(self.baseUrl)\(name).json"
+        }
     }
     
     func getValueAt(url: String, callback: @escaping (String?) -> Void) {
@@ -63,8 +67,8 @@ class NetworkManager {
     }
     
     
-    func getJson(callback: @escaping (NodeObject?) -> Void) {
-        getJSONValueAt(url: Ctx.jsonFile, callback: callback)
+    func getJson(name: String, callback: @escaping (NodeObject?) -> Void) {
+        getJSONValueAt(url: Ctx.getFile(name: name), callback: callback)
     }
     
 }

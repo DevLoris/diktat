@@ -14,6 +14,8 @@ class ImageNode {
     var identifier:String = ""
     var title:String = ""
     var layers:[CustomNodeLayer]?;
+    var nodes:[SCNNode]? = nil
+    var rendered = false
     
     init(identifier: String, title: String, layers:[CustomNodeLayer]) {
         self.identifier = identifier
@@ -30,15 +32,19 @@ class ImageNode {
     }
     
     func createNodes(parent : ARReferenceImage) -> [SCNNode] {
-        var nodes:[SCNNode] = [];
-        
-        self.layers?.forEach {  node in
-            if let n = node.createNode(parent: parent) {
-                nodes.append(n)
+        if nodes == nil {
+            var nodes_temp:[SCNNode] = []
+            self.layers?.forEach {  node in
+                if let n = node.createNode(parent: parent) {
+                    nodes_temp.append(n)
+                }
             }
+            
+            nodes = nodes_temp
         }
         
-        return nodes;
+    
+        return nodes!;
     }
     
     func getLayers() -> [CustomNodeLayer]? {
