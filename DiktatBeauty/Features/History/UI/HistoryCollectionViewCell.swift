@@ -8,9 +8,12 @@
 
 import UIKit
 
-class HistoryCollectionViewCell: UICollectionViewCell {
-    let CELL = "historyCollectionView"
+class HistoryCollectionViewCell: UICollectionViewCell { 
     
     
     @IBOutlet weak var posterImageView: UIImageView!
+    
+    public func populateWith(value:ImageNode) {
+        
+    }
 }
