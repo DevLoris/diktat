@@ -34,6 +34,7 @@
 		D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595092265CEF000A967C8 /* VideoNodeLayer.swift */; };
 		D28595162265F89900A967C8 /* UnitConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595152265F89900A967C8 /* UnitConverter.swift */; };
 		D28595212265F9EF00A967C8 /* DiktatBeautyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */; };
+		D2BB362D22A5499600210642 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BB362C22A5499600210642 /* TutorialViewController.swift */; };
 		D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */; };
 		D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = D2D0D9F5228AAFA400B32B24 /* test.gif */; };
 		D2F176F3229927CB007D4841 /* BluuNext-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D2F176F1229927B2007D4841 /* BluuNext-Bold.otf */; };
@@ -90,6 +91,7 @@
 		D285951E2265F9EF00A967C8 /* DiktatBeautyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiktatBeautyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D28595202265F9EF00A967C8 /* DiktatBeautyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiktatBeautyTests.swift; sourceTree = "<group>"; };
 		D28595222265F9EF00A967C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2BB362C22A5499600210642 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNodeLayer.swift; sourceTree = "<group>"; };
 		D2D0D9F5228AAFA400B32B24 /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 		D2F176F1229927B2007D4841 /* BluuNext-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BluuNext-Bold.otf"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 		D28594FB2265CC1D00A967C8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D2FD07B522A3A65800DC9C1C /* Tutorial */,
 				D24455BD228BF1CD00096BE5 /* Loader */,
 				D28594FE2265CC4700A967C8 /* AR */,
 				D285950E2265D7F200A967C8 /* History */,
@@ -352,6 +355,14 @@
 			path = DiktatBeautyTests;
 			sourceTree = "<group>";
 		};
+		D2BB362B22A5496E00210642 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2BB362C22A5499600210642 /* TutorialViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		D2F176F02299278A007D4841 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +370,14 @@
 				D2F176F2229927B2007D4841 /* BluuNext-Bolditalic.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D2FD07B522A3A65800DC9C1C /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				D2BB362B22A5496E00210642 /* ViewControllers */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,6 +568,7 @@
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,
 				D24455CA228BFFFE00096BE5 /* ConvertToNodeLayer.swift in Sources */,
 				D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */,
+				D2BB362D22A5499600210642 /* TutorialViewController.swift in Sources */,
 				D21469DC22A143E400B75A3E /* HistoryVars.swift in Sources */,
 				D24455CC228C090E00096BE5 /* Recognitazed.swift in Sources */,
 				D28594EC2265CBF400A967C8 /* ViewController.swift in Sources */,

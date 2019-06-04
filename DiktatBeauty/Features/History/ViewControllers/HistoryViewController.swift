@@ -10,8 +10,15 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
+    @IBOutlet weak var historyCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        historyCollectionView.delegate = self
+        historyCollectionView.dataSource = self
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -24,12 +31,12 @@ class HistoryViewController: UIViewController {
 
 extension HistoryViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = collectionView.bounds.width
-        return CGSize(width: collectionViewWidth/2, height: collectionViewWidth/3)
+        return CGSize(width: collectionViewWidth/2 - 10, height: collectionViewWidth/1.5)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

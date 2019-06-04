@@ -14,6 +14,13 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     
     public func populateWith(value:ImageNode) {
+        print("pop" + value.identifier)
         
+        populateImageFrom(id: value.identifier)
+    }
+    
+    public func populateImageFrom(id:String) {
+        let ui = UIImage(named:  id);
+        posterImageView.image = ui
     }
 }

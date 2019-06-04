@@ -52,7 +52,7 @@ class NetworkManager {
                 return
             }
             
-            let json = String(data: data, encoding: String.Encoding.utf8)
+            let _ = String(data: data, encoding: String.Encoding.utf8)
             
             do {
                 let decoded = try decoder.decode(T.self, from: data)
