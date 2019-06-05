@@ -45,7 +45,7 @@
 		D2F176F622992D75007D4841 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176F522992D75007D4841 /* HistoryViewController.swift */; };
 		D2F176F822992E7D007D4841 /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176F722992E7D007D4841 /* HistoryCollectionViewCell.swift */; };
 		D2F176FA22992EC9007D4841 /* Historized.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176F922992EC9007D4841 /* Historized.swift */; };
-		D2F176FC22992F23007D4841 /* HistoryFormsat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176FB22992F23007D4841 /* HistoryFormsat.swift */; };
+		D2F176FC22992F23007D4841 /* HistoryFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F176FB22992F23007D4841 /* HistoryFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +105,7 @@
 		D2F176F522992D75007D4841 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		D2F176F722992E7D007D4841 /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D2F176F922992EC9007D4841 /* Historized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historized.swift; sourceTree = "<group>"; };
-		D2F176FB22992F23007D4841 /* HistoryFormsat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFormsat.swift; sourceTree = "<group>"; };
+		D2F176FB22992F23007D4841 /* HistoryFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,7 +323,7 @@
 		D28595102265D80B00A967C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D2F176FB22992F23007D4841 /* HistoryFormsat.swift */,
+				D2F176FB22992F23007D4841 /* HistoryFormat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -572,7 +572,7 @@
 				D285950C2265CEF000A967C8 /* ImageNode.swift in Sources */,
 				D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */,
 				D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */,
-				D2F176FC22992F23007D4841 /* HistoryFormsat.swift in Sources */,
+				D2F176FC22992F23007D4841 /* HistoryFormat.swift in Sources */,
 				D2F176F622992D75007D4841 /* HistoryViewController.swift in Sources */,
 				D289EB9822A7B2D00089B56B /* HistoryPosterTableViewCell.swift in Sources */,
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,

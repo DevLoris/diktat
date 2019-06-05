@@ -18,8 +18,6 @@ class HistoryTextTableViewCell: UITableViewCell {
         self.backgroundColor = .clear
         
         self.bounds.size.height = textView.bounds.size.height 
-        
-        print(textView.bounds.size)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
