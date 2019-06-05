@@ -12,6 +12,8 @@ class HistoryViewController: UIViewController {
 
     @IBOutlet weak var historyCollectionView: UICollectionView!
     
+    var clickedItem = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,24 @@ class HistoryViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "toHistoryDetails") {
+            if let destinationViewController = segue.destination as? HistoryDetailsViewController {
+                destinationViewController.node =
+                    Array(Recognitazed.instance.nodes)[clickedItem].value
+            }
+        }
+    }
+}
+
+
+
+extension HistoryViewController:UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        clickedItem = indexPath.item
+        self.performSegue(withIdentifier: "toHistoryDetails", sender: self)
+    }
 }
 
 extension HistoryViewController : UICollectionViewDelegateFlowLayout {

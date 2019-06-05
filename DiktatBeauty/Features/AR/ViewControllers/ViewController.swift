@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         
         let loaded = ["anorexia", "maquillage"]
         loaded.forEach { (name) in
             NetworkManager.instance.getJson(name: name) { (node) in

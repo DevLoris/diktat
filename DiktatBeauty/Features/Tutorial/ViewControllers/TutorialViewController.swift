@@ -39,7 +39,7 @@ class TutorialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+         
         let bulletsViews:[UIImageView] = [self.bulletView1, self.bulletView2, self.bulletView3]
  
         //On ajoute un touch event sur toutes les images "bullets"
@@ -182,5 +182,10 @@ class TutorialViewController: UIViewController {
                 setSlide(slide: actualBullet + 1)
             }
         }
+    }
+    
+    
+    @IBAction func dismissTutorialButton(_ sender: Any) {
+        performSegue(withIdentifier: "ar-view", sender: self)
     }
 }

@@ -13,6 +13,7 @@ import SceneKit
 class ImageNode {
     var identifier:String = ""
     var title:String = ""
+    var text:String = "bonjour"
     var layers:[CustomNodeLayer]?;
     var nodes:[SCNNode]? = nil
     var rendered = false

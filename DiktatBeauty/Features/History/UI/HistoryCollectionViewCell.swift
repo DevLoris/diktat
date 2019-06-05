@@ -20,7 +20,7 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     }
     
     public func populateImageFrom(id:String) {
-        let ui = UIImage(named:  id);
+        let ui = UIImage(named:  id + "__poster");
         posterImageView.image = ui
     }
 }
