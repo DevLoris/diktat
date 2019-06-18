@@ -13,18 +13,16 @@ import SceneKit
 class ImageNode {
     var identifier:String = ""
     var title:String = ""
-    var text:String = "bonjour"
+    var text:String = ""
     var layers:[CustomNodeLayer]?;
     var nodes:[SCNNode]? = nil
     var rendered = false
     
-    init(identifier: String, title: String, layers:[CustomNodeLayer]) {
+    init(identifier: String, title: String, layers:[CustomNodeLayer], text: String = "") {
         self.identifier = identifier
         self.title = title
+        self.text = text
         self.layers = layers;
-        
-        let newParticle = ParticlesNodeLayer(identifier: "particles_test", material_name: "skullpardessus", position: ARPosition(.RELATIVE, 0, 0.6, 0), size: ARSize(1, 1));
-        self.layers?.append(newParticle)
     }
     
     init(layers:[CustomNodeLayer]) {
