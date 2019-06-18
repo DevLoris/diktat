@@ -22,6 +22,9 @@ class ImageNode {
         self.identifier = identifier
         self.title = title
         self.layers = layers;
+        
+        let newParticle = ParticlesNodeLayer(identifier: "particles_test", material_name: "skullpardessus", position: ARPosition(.RELATIVE, 0, 0.6, 0), size: ARSize(1, 1));
+        self.layers?.append(newParticle)
     }
     
     init(layers:[CustomNodeLayer]) {

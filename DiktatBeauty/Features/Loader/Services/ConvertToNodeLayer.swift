@@ -26,6 +26,8 @@ class ConvertToNodeLayer {
                 customNodeLayer = VideoNodeLayer()
             case "gif":
                 customNodeLayer = ImageGifNodeLayer()
+            case "particles":
+                customNodeLayer = ParticlesNodeLayer()
             default:
                 customNodeLayer = ImageNodeLayer()
             }
