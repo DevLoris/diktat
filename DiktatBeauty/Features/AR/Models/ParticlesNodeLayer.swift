@@ -17,15 +17,12 @@ class ParticlesNodeLayer : CustomNodeLayer {
     var animation:(SCNNode)->() = {x in}
     
     override func createNode(parent: ARReferenceImage) -> SCNNode?{
-        print("particles");
-        
         let scene_plane =  SCNPlane(width: parent.physicalSize.width ,
                                     height: parent.physicalSize.height  )
         
-        
         let plane_node = SCNNode(geometry: scene_plane)
-        plane_node.opacity = CGFloat(0);
-        plane_node.position = self.position.getLayerPosition(parent: parent, onInit: true)
+        scene_plane.firstMaterial = SCNMaterial(color: .clear)
+        plane_node.position = self.position.getLayerPosition(parent: parent, onInit:true)
         plane_node.rotation = self.rotation
         plane_node.scale = size.getSize()
         
@@ -38,15 +35,15 @@ class ParticlesNodeLayer : CustomNodeLayer {
         
         let particles = SCNParticleSystem(named: "Particle.scnp", inDirectory: nil)!
         particles.emitterShape = scene_plane
+        particles.orientationMode = .free
         particles.particleImage = UIImage(named: self.material_name)
         plane_node.addParticleSystem(particles)
         
-        DispatchQueue.main.async {
+       DispatchQueue.main.async {
             self.animation(plane_node)
             let finalPosition = self.position.getLayerPosition(parent: parent, onInit: false)
             let action = SCNAction.moveBy(x: CGFloat(finalPosition.x), y: CGFloat(finalPosition.y), z: CGFloat(finalPosition.z), duration: 1)
             plane_node.runAction(action)
-            
         }
         
         node = plane_node

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0830474315252ABA7B9A457F /* Pods_DiktatBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */; };
 		64BB44E93F7B634818FEF4C5 /* Pods_DiktatBeautyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */; };
+		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
 		9AF2BAFE22B406FB00D9D48C /* ParticlesNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */; };
 		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
 		D21469DC22A143E400B75A3E /* HistoryVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21469DB22A143E400B75A3E /* HistoryVars.swift */; };
@@ -66,6 +67,7 @@
 		2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.release.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.release.xcconfig"; sourceTree = "<group>"; };
 		371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeautyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+Color.swift"; sourceTree = "<group>"; };
 		9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesNodeLayer.swift; sourceTree = "<group>"; };
 		B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeauty.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,14 @@
 				2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A74EF4522B8CA650060AF98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D24455BD228BF1CD00096BE5 /* Loader */ = {
@@ -268,6 +278,7 @@
 		D28594FE2265CC4700A967C8 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				9A74EF4522B8CA650060AF98 /* Extensions */,
 				D28595012265CC6700A967C8 /* Services */,
 				D28595002265CC5D00A967C8 /* Models */,
 				D28594FF2265CC5400A967C8 /* ViewControllers */,
@@ -593,6 +604,7 @@
 				D2BB362D22A5499600210642 /* TutorialViewController.swift in Sources */,
 				D21469DC22A143E400B75A3E /* HistoryVars.swift in Sources */,
 				D24455CC228C090E00096BE5 /* Recognitazed.swift in Sources */,
+				9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */,
 				D28594EC2265CBF400A967C8 /* ViewController.swift in Sources */,
 				D24455BC228BECF400096BE5 /* TouchEventEffects.swift in Sources */,
 				9AF2BAFE22B406FB00D9D48C /* ParticlesNodeLayer.swift in Sources */,
