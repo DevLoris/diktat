@@ -8,28 +8,28 @@
 
 import Foundation
 
-struct NodeObject : Decodable {
-    var name:String
-    var title:String
-    var layers:[NodeObjectNodes]
+struct NodeObject: Decodable {
+    var name: String
+    var title: String
+    var layers: [NodeObjectNodes]
 }
 
-struct NodeObjectNodes : Decodable {
-    var id:String
-    var type:String
-    var material:String
-    var position:[Float]
-    var rotation:[Float]
-    var size:[Float]
-    var opacity:Float
-    var animation:String?
-    var hidden_default:Bool
-    var click_event:[NodeObjectNodesClick]
+struct NodeObjectNodes: Decodable {
+    var id: String
+    var type: String
+    var material: String
+    var position: [Float]
+    var rotation: [Float]
+    var size: [Float]
+    var opacity: Float
+    var animation: String?
+    var hidden_default: Bool
+    var click_event: [NodeObjectNodesClick]
 }
 
-struct NodeObjectNodesClick : Decodable {
-    var apply:String
-    var on:String
-    var duration:Float
-    var delay:Float
+struct NodeObjectNodesClick: Decodable {
+    var apply: String
+    var on: String
+    var duration: Float
+    var delay: Float
 }
