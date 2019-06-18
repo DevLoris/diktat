@@ -112,12 +112,14 @@ extension ViewController : ARSCNViewDelegate {
                     //On sauvegarde la node actuelle
                     self.actualNode =  referenceImage.name ?? ""
                     
+                    Historized.instance.addViewedImage(imageNode: imgNode)
+                    
                     //On applique le changement de label, obligé de retourner sur la queue principale
                     DispatchQueue.main.async { 
                         self.imageNameLabel.text = imgNode.title
                     }
                     //on update l'identifier
-                    self.currentAnchorIdentifier = anchor.identifier 
+                    self.currentAnchorIdentifier = anchor.identifier
                 }
             }
         }

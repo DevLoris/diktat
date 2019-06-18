@@ -13,7 +13,7 @@ class NetworkManager {
     static let instance = NetworkManager()
     
     struct Ctx {
-        static let baseUrl = "https://dkt.lorispinna.com/"
+        static let baseUrl = "https://diktat.netlify.com/api/"
         
         struct Resources {
             static let jsonFile = "format.json"
