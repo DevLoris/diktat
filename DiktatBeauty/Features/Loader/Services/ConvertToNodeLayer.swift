@@ -11,17 +11,18 @@ import SceneKit
 import ARKit
 
 class ConvertToNodeLayer {
+    // Create a new ImageNode and add it to the "Recognizated" singleton
     static func convertAndPopulate(object: NodeObject) {
         Recognitazed.instance.nodes[object.name] = convert(object: object)
     }
     
-    static func convert(object: NodeObject)->ImageNode {
+    // Convert a NodeObject to an ImageNode
+    static func convert(object: NodeObject) -> ImageNode {
         let n = ImageNode(identifier: object.name, title: object.title, layers: [])
 
+        // Loop over all the layers and instanciate/hydrate them
         object.layers.forEach { (node) in
-            guard let nodeLayer = guessNodeLayerType(type: node.type) else {
-                return
-            }
+            guard let nodeLayer = guessNodeLayerType(type: node.type) else { return }
             
             nodeLayer.hydrate(node: node)
             
@@ -31,6 +32,7 @@ class ConvertToNodeLayer {
         return n;
     }
     
+    // Guess the type of a NodeLayer for a given type name
     static func guessNodeLayerType(type: String) -> CustomNodeLayer? {
         switch type {
             case "video":

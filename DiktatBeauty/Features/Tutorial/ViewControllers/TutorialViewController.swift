@@ -38,7 +38,7 @@ class TutorialViewController: UIViewController {
     
     var slides: [UIView] = []
     
-    override func viewDidLoad() -> Void {
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         slides = [slideView1, slideView2, slideView3]
@@ -56,7 +56,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Adding touch event on every "bullet" item
-    func setBulletViewsTouchable() -> Void {
+    func setBulletViewsTouchable() {
         let bulletsViews:[UIImageView] = [self.bulletView1, self.bulletView2, self.bulletView3]
         
         bulletsViews.forEach { (im) in
@@ -74,7 +74,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Set the active slide
-    func setActiveSlide(index: Int) -> Void {
+    func setActiveSlide(index: Int) {
         let oldIndex = currentIndex
         currentIndex = index
         
@@ -84,7 +84,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Animate slide change
-    func animateChangeSlide(oldIndex: Int) -> Void {
+    func animateChangeSlide(oldIndex: Int) {
         let sliderWidth = sliderView.frame.width
         let oldSlide = slides[oldIndex]
         let newSlide = slides[currentIndex]
@@ -101,7 +101,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Animate a slide
-    func animateSlide() -> Void {
+    func animateSlide() {
         if let timer = imageChangeTimer {
             timer.invalidate()
             imageChangeTimer = nil
@@ -124,7 +124,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Translate to every slide except the first one
-    func initSlidesPosition() -> Void {
+    func initSlidesPosition() {
         let sliderWidth = sliderView.frame.width
         
         for (index, element) in slides.enumerated() {
@@ -135,7 +135,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Set bullets images depending on the active bullet
-    func updateBulletsImage() -> Void {
+    func updateBulletsImage() {
         if currentIndex >= maxBullet { return }
 
         bulletView1.image = UIImage(named: currentIndex == 0 ? "circle_full" : "circle_empty")
@@ -144,7 +144,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Change image1
-    @objc func autoChangeImage1() -> Void {
+    @objc func autoChangeImage1() {
         // Change image in this function
         imageSlideView1.image = UIImage(named: "tutorial-1-" + String(imageIndexView))
         
@@ -156,7 +156,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Change image2
-    @objc func autoChangeImage2() -> Void {
+    @objc func autoChangeImage2() {
         //change image in this function
         imageSlideView2.image = UIImage(named: "tutorial-2-" + String(imageIndexView))
         
@@ -168,7 +168,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Clic detection on bullet
-    @objc func handleBulletTouch(tapGestureRecognizer: UITapGestureRecognizer) -> Void {
+    @objc func handleBulletTouch(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         
         switch tappedImage {
@@ -184,7 +184,7 @@ class TutorialViewController: UIViewController {
     }
     
     // Swipe detection to go through tutorial
-    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
         if gesture.direction == UISwipeGestureRecognizer.Direction.right {
             if currentIndex > 0 {
                 setActiveSlide(index: currentIndex - 1)
@@ -198,7 +198,7 @@ class TutorialViewController: UIViewController {
     }
     
     
-    @IBAction func dismissTutorialButton(_ sender: Any) -> Void {
+    @IBAction func dismissTutorialButton(_ sender: Any) {
         performSegue(withIdentifier: "ar-view", sender: self)
     }
 }
