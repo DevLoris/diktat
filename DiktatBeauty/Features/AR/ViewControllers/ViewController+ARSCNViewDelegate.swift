@@ -92,8 +92,14 @@ extension ViewController : ARSCNViewDelegate {
             })
             
             posterNode?.rendered = false
-            detailsButton.isHidden = true
+            
+            
+            DispatchQueue.main.async {
+                self.detailsButton.isHidden = true
+            }
         }
+        
+        self.timer.invalidate()
     }
     
     func renderDetectedPoster(referenceImage: ARReferenceImage, renderer: SCNSceneRenderer, node: SCNNode, anchor: ARAnchor) {
