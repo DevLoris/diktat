@@ -221,13 +221,17 @@
                                     <segue destination="ADZ-gk-fqn" kind="presentation" id="Hpv-Bu-4yO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYB-vo-zMy">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYB-vo-zMy">
                                 <rect key="frame" x="20" y="1262" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="Mgu-ad-oil"/>
                                     <constraint firstAttribute="height" constant="84" id="d7p-PO-VEL"/>
                                 </constraints>
                                 <state key="normal" title="COLLECTION" image="details"/>
+                                <connections>
+                                    <action selector="openDetailsFromAR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="utz-Yc-CUA"/>
+                                    <segue destination="p7u-AV-UM7" kind="presentation" identifier="fromARToDetails" id="UMg-ea-nZm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -245,12 +249,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="MsA-Xo-yfZ"/>
                     <connections>
+                        <outlet property="detailsButton" destination="SYB-vo-zMy" id="DCs-bu-wKQ"/>
                         <outlet property="sceneView" destination="bg5-Pu-kFc" id="wh7-zX-NpY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+            <point key="canvasLocation" x="137.109375" y="137.92093704245971"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="SpW-Pf-L4P">
@@ -369,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oey-Kr-bJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276" y="179"/>
+            <point key="canvasLocation" x="1209" y="-313"/>
         </scene>
         <!--History Details View Controller-->
         <scene sceneID="hBE-Z4-kIt">
@@ -598,4 +603,7 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
         <image name="tutorial-2-0" width="2000" height="2000"/>
         <image name="tutorial-3-0" width="2000" height="2000"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UMg-ea-nZm"/>
+    </inferredMetricsTieBreakers>
 </document>
