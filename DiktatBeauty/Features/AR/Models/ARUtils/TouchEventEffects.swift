@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum TouchEventEffects:String {
+enum TouchEventEffects: String {
     case NONE
     case FADEIN
     case FADEOUT

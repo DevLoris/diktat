@@ -10,49 +10,30 @@ import Foundation
 import ARKit
 import SceneKit
 
-class ImageNodeLayer  :  CustomNodeLayer {
-   
-    var animation:(SCNNode)->() = {x in} 
+class ImageNodeLayer: CustomNodeLayer {
+    var animation: (SCNNode) -> Void = {x in}
     
-    override func createNode(parent: ARReferenceImage) -> SCNNode{
-        let scene_plane =  SCNPlane(width: parent.physicalSize.width ,
-                                    height: parent.physicalSize.height  ) 
-        //Materiel
-        let material = SCNMaterial(); 
-        material.diffuse.contents = UIImage(named: self.material_name);
-        scene_plane.firstMaterial?.isDoubleSided = true
-        scene_plane.materials = [material];
+    override func createNode(parent: ARReferenceImage) -> SCNNode {
+        // Create the material
+        let material = SCNMaterial(imageName: self.materialName)
         
-        //Node
-        let plane_node = SCNNode(geometry: scene_plane)
-        plane_node.opacity = CGFloat(self.opacity);
-        plane_node.position = self.position.getLayerPosition(parent: parent, onInit: true)
-        plane_node.rotation = self.rotation
-        plane_node.scale = size.getSize()
+        // Create a base plan for the node
+        let scenePlane = SCNPlane(width: parent.physicalSize.width, height: parent.physicalSize.height, withMaterial: material)
         
-        plane_node.isHidden = self.hiddenDefault
+        // Create the node
+        let planeNode = getPlaneNode(scenePlane: scenePlane, parent: parent)
+        planeNode.eulerAngles.x = -.pi / 2
         
-        //On set le name
-        plane_node.name = self.identifier
-        
-        plane_node.eulerAngles.x = -.pi / 2
-        
-        
-       DispatchQueue.main.async {
-            self.animation(plane_node)
+        // Create animation and run action
+        DispatchQueue.main.async {
+            self.animation(planeNode)
             let finalPosition = self.position.getLayerPosition(parent: parent, onInit: false)
             let action = SCNAction.moveBy(x: CGFloat(finalPosition.x), y: CGFloat(finalPosition.y), z: CGFloat(finalPosition.z), duration: 1)
-            plane_node.runAction(action)
-        
+            planeNode.runAction(action)
         }
         
-        node = plane_node
+        node = planeNode
         
-        return plane_node
-    }
-    
-    
-    func getIdentifier() -> String {
-        return identifier;
+        return planeNode
     }
 }
