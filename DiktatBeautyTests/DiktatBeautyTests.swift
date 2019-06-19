@@ -25,7 +25,7 @@ class DiktatBeautyTests: XCTestCase {
         XCTAssert(UnitConverter.pixelsToCentimeters(pixels: 3, dpi: 96) == 0.079375)
         
         //Check si les centimetres convertis donnent la bonne valeur 
-        XCTAssert(UnitConverter.centimetersToPixels(pixels: 1, dpi: 96) != 1)
+        XCTAssert(UnitConverter.centimetersToPixels(centimeters: 1, dpi: 96) != 1)
     }
 
     func testExample() {

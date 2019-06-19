@@ -207,12 +207,6 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-Pu-kFc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jP-OG-YR7">
-                                <rect key="frame" x="20" y="44" width="374" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHA-yw-bgg">
                                 <rect key="frame" x="310" y="778" width="84" height="84"/>
                                 <constraints>
@@ -238,7 +232,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="MsA-Xo-yfZ"/>
                     <connections>
-                        <outlet property="imageNameLabel" destination="0jP-OG-YR7" id="clI-kz-TkN"/>
                         <outlet property="sceneView" destination="bg5-Pu-kFc" id="wh7-zX-NpY"/>
                     </connections>
                 </viewController>
@@ -413,9 +406,9 @@
                                                     <rect key="frame" x="20" y="11" width="374" height="754.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
-                                                            <mutableString key="content">L’anorexie mentale est l’un des plus grand fléau touchant les adolescents occidentaux de 14 à 17 ans. Cette maladie touche majoritairement les adolescentes, en effet, neuf cas sur dix sont des filles[1]. Elle se manifeste par des troubles alimentaires (boulimie, refus de s’alimenter, vomissements volontaires…)et dure en moyenne entre un an et demi et trois ans[1]. Une hyperactivité intellectuelle et physique peut également se manifester. Cette pathologie psychologique est la cause principale de mortalité chez les jeunes. En effet, aucun traitement curatif définitif n’existe encore [2]. De plus, 5 à 15% des patients finissent par en décéder. Cette maladie provoque de nombreux symptômes tels que des troubles du rythme cardiaque, des baisses de tensions et une absence de menstruation[3]. Dans certains cas extrêmes elle peut même conduire à une dégénérescence osseuse, l’ostéoporose. Cependant, la cause principale de mortalité liée à cette maladie est le suicide qui atteint près de la moitié des patients décédés.
+                                                            <string key="content">L’anorexie mentale est l’un des plus grand fléau touchant les adolescents occidentaux de 14 à 17 ans. Cette maladie touche majoritairement les adolescentes, en effet, neuf cas sur dix sont des filles[1]. Elle se manifeste par des troubles alimentaires (boulimie, refus de s’alimenter, vomissements volontaires…)et dure en moyenne entre un an et demi et trois ans[1]. Une hyperactivité intellectuelle et physique peut également se manifester. Cette pathologie psychologique est la cause principale de mortalité chez les jeunes. En effet, aucun traitement curatif définitif n’existe encore [2]. De plus, 5 à 15% des patients finissent par en décéder. Cette maladie provoque de nombreux symptômes tels que des troubles du rythme cardiaque, des baisses de tensions et une absence de menstruation[3]. Dans certains cas extrêmes elle peut même conduire à une dégénérescence osseuse, l’ostéoporose. Cependant, la cause principale de mortalité liée à cette maladie est le suicide qui atteint près de la moitié des patients décédés.
 Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans réussissent à en guérir et 50% des adolescents pris en charge parviennent à s’en sortir [4]. 
-</mutableString>
+</string>
                                                             <attributes>
                                                                 <color key="NSColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <font key="NSFont" metaFont="system" size="17"/>
@@ -490,9 +483,9 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CtB-4I-pHy">
                                                 <rect key="frame" x="10" y="20" width="394" height="274"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <mutableString key="text">L’anorexie mentale est l’un des plus grand fléau touchant les adolescents occidentaux de 14 à 17 ans. Cette maladie touche majoritairement les adolescentes, en effet, neuf cas sur dix sont des filles[1]. Elle se manifeste par des troubles alimentaires (boulimie, refus de s’alimenter, vomissements volontaires…)et dure en moyenne entre un an et demi et trois ans[1]. Une hyperactivité intellectuelle et physique peut également se manifester. Cette pathologie psychologique est la cause principale de mortalité chez les jeunes. En effet, aucun traitement curatif définitif n’existe encore [2]. De plus, 5 à 15% des patients finissent par en décéder. Cette maladie provoque de nombreux symptômes tels que des troubles du rythme cardiaque, des baisses de tensions et une absence de menstruation[3]. Dans certains cas extrêmes elle peut même conduire à une dégénérescence osseuse, l’ostéoporose. Cependant, la cause principale de mortalité liée à cette maladie est le suicide qui atteint près de la moitié des patients décédés.
+                                                <string key="text">L’anorexie mentale est l’un des plus grand fléau touchant les adolescents occidentaux de 14 à 17 ans. Cette maladie touche majoritairement les adolescentes, en effet, neuf cas sur dix sont des filles[1]. Elle se manifeste par des troubles alimentaires (boulimie, refus de s’alimenter, vomissements volontaires…)et dure en moyenne entre un an et demi et trois ans[1]. Une hyperactivité intellectuelle et physique peut également se manifester. Cette pathologie psychologique est la cause principale de mortalité chez les jeunes. En effet, aucun traitement curatif définitif n’existe encore [2]. De plus, 5 à 15% des patients finissent par en décéder. Cette maladie provoque de nombreux symptômes tels que des troubles du rythme cardiaque, des baisses de tensions et une absence de menstruation[3]. Dans certains cas extrêmes elle peut même conduire à une dégénérescence osseuse, l’ostéoporose. Cependant, la cause principale de mortalité liée à cette maladie est le suicide qui atteint près de la moitié des patients décédés.
 Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans réussissent à en guérir et 50% des adolescents pris en charge parviennent à s’en sortir [4]. 
-</mutableString>
+</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>

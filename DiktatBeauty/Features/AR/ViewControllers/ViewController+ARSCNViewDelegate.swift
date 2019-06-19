@@ -17,16 +17,14 @@ extension ViewController : ARSCNViewDelegate {
         sceneView.session.delegate = self
     }
     
-    
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Prevent the screen from being dimmed to avoid interuppting the AR experience.
+        // Prevent the screen from being dimmed to avoid interuppting the AR experience
         UIApplication.shared.isIdleTimerDisabled = true
         
         // Start the AR experience
-        resetTracking()
+        prepareSession()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -34,94 +32,95 @@ extension ViewController : ARSCNViewDelegate {
         
         session.pause()
     }
-    
-    
-    func resetTracking() {
+
+    // Check if everything is ready to start the session and run it
+    func prepareSession() {
         guard let referenceImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
             fatalError("Missing expected asset catalog resources.")
         }
         
         let configuration = ARImageTrackingConfiguration()
         configuration.trackingImages = referenceImages
+        
         if #available(iOS 12.0, *) {
             configuration.maximumNumberOfTrackedImages = 1
         }
+        
         session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-        
-    }
-    
-    
-    //Obligé de faire de l'objective C
-    @objc
-    func imageLost(_ sender:Timer){
-        destroy()
-    }
-    
-    func destroy() {
-        
-        print("out")
-        
-        guard
-            let actual = actualNode
-            else { return }
-        
-        let node = Recognitazed.instance.nodes[actual]
-        if node!.rendered {
-            node?.nodes?.forEach({ (n) in
-                n.removeFromParentNode()
-            })
-            node?.rendered = false
-        }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         
-        let referenceImage = imageAnchor.referenceImage
+        initTimer()
         
-        DispatchQueue.main.async {
-            if(self.timer != nil){
-                self.timer.invalidate()
-            }
-            self.timer = Timer.scheduledTimer(timeInterval: 0.6 , target: self, selector: #selector(self.imageLost(_:)), userInfo: nil, repeats: false)
-        }
-        
-        //si l'identifier de l'ancre est différent, alors on détruit le rendu actuel 
-        if(self.currentAnchorIdentifier != imageAnchor.identifier &&
+        // If the anchor identifier is different, destroy the actual render
+        if (self.currentAnchorIdentifier != imageAnchor.identifier &&
             self.currentAnchorIdentifier != nil
             && self.actualNode != nil){
             destroy()
         }
 
-        
-        updateQueue.async {
-            if let name = referenceImage.name {
-                
-                if let imgNode = Recognitazed.instance.nodes[name] {
-                    //On génère les nodes et on fait le rendu
-                    imgNode.rendered = true
-                    let generatedNodes = imgNode.createNodes(parent: referenceImage)
-                    renderer.prepare(generatedNodes, completionHandler: { n in
-                        generatedNodes.forEach { n in
-                            DispatchQueue.main.async {
-                                node.addChildNode(n);
-                            }
-                        }
-                    })
-                    
-                    //On sauvegarde la node actuelle
-                    self.actualNode =  referenceImage.name ?? ""
-                    
-                    Historized.instance.addViewedImage(imageNode: imgNode)
-                    
-                    //On applique le changement de label, obligé de retourner sur la queue principale
-                    DispatchQueue.main.async { 
-                        self.imageNameLabel.text = imgNode.title
-                    }
-                    //on update l'identifier
-                    self.currentAnchorIdentifier = anchor.identifier
-                }
+        renderDetectedPoster(referenceImage: imageAnchor.referenceImage, renderer: renderer, node: node, anchor: anchor)
+    }
+    
+    // Set the timer which calls the destroy method when the image is lost for too long
+    func initTimer() {
+        DispatchQueue.main.async {
+            if self.timer != nil {
+                self.timer.invalidate()
             }
+            
+            self.timer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(self.imageLost(_:)), userInfo: nil, repeats: false)
+        }
+    }
+    
+    @objc
+    func imageLost(_ sender:Timer){
+        destroy()
+    }
+    
+    // Destroy all the layers
+    func destroy() {
+        guard let actual = actualNode else { return }
+        
+        let posterNode = Recognitazed.instance.nodes[actual]
+        
+        if posterNode!.rendered {
+            posterNode?.nodes?.forEach({ (n) in
+                n.removeFromParentNode()
+            })
+            
+            posterNode?.rendered = false
+        }
+    }
+    
+    func renderDetectedPoster(referenceImage: ARReferenceImage, renderer: SCNSceneRenderer, node: SCNNode, anchor: ARAnchor) {
+        updateQueue.async {
+            guard
+                let name = referenceImage.name,
+                let posterNode = Recognitazed.instance.nodes[name]
+            else { return }
+            
+            posterNode.rendered = true
+            
+            // Generate all the nodes of the detected poster
+            let generatedNodes = posterNode.createNodes(parent: referenceImage)
+            
+            // Add generated nodes to the target SCNNode
+            renderer.prepare(generatedNodes, completionHandler: { n in
+                generatedNodes.forEach { n in
+                    DispatchQueue.main.async {
+                        node.addChildNode(n);
+                    }
+                }
+            })
+            
+            // Add the poster in the history
+            Historized.instance.addViewedPoster(posterNode)
+            
+            self.actualNode =  referenceImage.name ?? ""
+            self.currentAnchorIdentifier = anchor.identifier
         }
     }
 }

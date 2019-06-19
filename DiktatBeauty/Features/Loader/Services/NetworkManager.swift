@@ -15,26 +15,8 @@ class NetworkManager {
     struct Ctx {
         static let baseUrl = "https://diktat.netlify.com/api/"
         
-        struct Resources {
-            static let jsonFile = "format.json"
-        }
-        
-        static let jsonFile = baseUrl + Resources.jsonFile
-        
-        static func getFile(name:String)->String {
+        static func getFileUrl(name: String) -> String {
             return "\(self.baseUrl)\(name).json"
-        }
-    }
-    
-    func getValueAt(url: String, callback: @escaping (String?) -> Void) {
-        guard url.isURL() else {
-            callback("The given URL " + url + " is not valid")
-            
-            return
-        }
-        
-        request(url).responseString { (res) in
-            callback(res.result.value)
         }
     }
     
@@ -66,9 +48,8 @@ class NetworkManager {
         }
     }
     
-    
     func getJson(name: String, callback: @escaping (NodeObject?) -> Void) {
-        getJSONValueAt(url: Ctx.getFile(name: name), callback: callback)
+        getJSONValueAt(url: Ctx.getFileUrl(name: name), callback: callback)
     }
     
 }

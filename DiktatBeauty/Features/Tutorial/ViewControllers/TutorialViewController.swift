@@ -28,158 +28,171 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var slideView3: UIView!
     @IBOutlet weak var imageSlideView3: UIImageView!
     
-    //Stocke le timer pour l'image (utilisé pour l'image 1, pour animer le mouvement)
-    var imageChangeTimer:Timer? = nil
+    // Keeping image timer (used for image 1, to animate the motion)
+    var imageChangeTimer: Timer? = nil
     var imageIndexView = 0
     
-    //Progression
-    var actualBullet = 1
+    // Progression
+    var currentIndex = 1
     var maxBullet = 3
     
+    var slides: [UIView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+        
+        slides = [slideView1, slideView2, slideView3]
+        
+        // Set bullet items as touchable
+        setBulletViewsTouchable()
+        
+        // Set swipe events for left and right
+        setSwipeEvent(direction: .left)
+        setSwipeEvent(direction: .right)
+        
+        // Activating the first slide
+        setActiveSlide(index: 0)
+        initSlidesPosition()
+    }
+    
+    // Adding touch event on every "bullet" item
+    func setBulletViewsTouchable() {
         let bulletsViews:[UIImageView] = [self.bulletView1, self.bulletView2, self.bulletView3]
- 
-        //On ajoute un touch event sur toutes les images "bullets"
+        
         bulletsViews.forEach { (im) in
-            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleBulletTouch(tapGestureRecognizer:)))
             im.isUserInteractionEnabled = true
             im.addGestureRecognizer(tapGestureRecognizer)
         }
-        
-        //On ajoute le swipe event
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeLeft.direction = .left
-        self.view.addGestureRecognizer(swipeLeft)
-        
-        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
-        swipeRight.direction = .right
-        self.view.addGestureRecognizer(swipeRight)
-        
-        //On active juste la première slide
-        setSlide(slide: 0, is_init: true)
-        
     }
     
+    // Add a swipe event to the view, for a given direction
+    func setSwipeEvent(direction: UISwipeGestureRecognizer.Direction) {
+        let swipeEvent = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeEvent.direction = direction
+        self.view.addGestureRecognizer(swipeEvent)
+    }
     
-    
-    func setSlide(slide:Int, is_init:Bool = false)  {
-        if(slide == actualBullet && !is_init) {
-            return
-        }
+    // Set the active slide
+    func setActiveSlide(index: Int) {
+        let oldIndex = currentIndex
+        currentIndex = index
         
-        //Liste des slides et large du slider
-        let slides:[UIView] = [slideView1, slideView2, slideView3]
+        animateChangeSlide(oldIndex: oldIndex)
+        animateSlide()
+        updateBulletsImage()
+    }
+    
+    // Animate slide change
+    func animateChangeSlide(oldIndex: Int) {
         let sliderWidth = sliderView.frame.width
+        let oldSlide = slides[oldIndex]
+        let newSlide = slides[currentIndex]
         
-        //Les animations de slide etc ne se font que si on n'est pas à l'initialisation
-        if(!is_init) {
-            let actualSlide =  slides[actualBullet]
-            let newSlide =  slides[slide]
-            
-            //l'actual doit swipe à gauche ; le nouveau arrive pas la droite
-            var dir:CGFloat = 1;
-            if (slide < actualBullet) {
-                dir = -1;
-            }
-            
-            newSlide.transform = CGAffineTransform(translationX: sliderWidth * dir, y: 0)
-            
-            UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
-                newSlide.transform = CGAffineTransform(translationX: 0, y: 0)
-                actualSlide.transform = CGAffineTransform(translationX: -dir * sliderWidth, y: 0)
-            })
-        }
-        else {
-            //On est dans le cas de l'initialisation, il faut juste mettre un translate à tous sauf le premier
-            for (index, element) in slides.enumerated() {
-                if(index != 0) {
-                    element.transform = CGAffineTransform(translationX: sliderWidth, y: 0)
-                }
-            }
-        }
-   
+        // Old slide should go to the left and the new one arrive from the right
+        let dir: CGFloat = currentIndex >= oldIndex ? 1 : -1;
         
-        setBullet(bullet: slide)
+        newSlide.transform = CGAffineTransform(translationX: sliderWidth * dir, y: 0)
         
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+            newSlide.transform = CGAffineTransform(translationX: 0, y: 0)
+            oldSlide.transform = CGAffineTransform(translationX: -dir * sliderWidth, y: 0)
+        })
+    }
+    
+    // Animate a slide
+    func animateSlide() {
         if let timer = imageChangeTimer {
             timer.invalidate()
             imageChangeTimer = nil
         }
         
         imageIndexView = 0
-        switch slide {
-        case 0:
-            imageChangeTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.autoChangeImage1), userInfo: nil, repeats: true)
-        case 1:
-            imageChangeTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.autoChangeImage2), userInfo: nil,   repeats: true)
-        default: break
+        
+        var selector: Selector;
+        
+        switch currentIndex {
+            case 0:
+                selector = #selector(self.autoChangeImage1)
+            case 1:
+                selector = #selector(self.autoChangeImage2)
+            default:
+                return
+        }
+        
+        imageChangeTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: selector, userInfo: nil, repeats: true)
+    }
+    
+    // Translate to every slide except the first one
+    func initSlidesPosition() {
+        let sliderWidth = sliderView.frame.width
+        
+        for (index, element) in slides.enumerated() {
+            if index != 0 {
+                element.transform = CGAffineTransform(translationX: sliderWidth, y: 0)
+            }
         }
     }
     
-    func setBullet(bullet:Int) {
-        if(bullet < maxBullet) {
-            //En fonction de la bullet cliquée, on active les cercles etc
-            bulletView1.image = UIImage(named: bullet == 0 ? "circle_full" : "circle_empty")
-            bulletView2.image = UIImage(named: bullet == 1 ? "circle_full" : "circle_empty")
-            bulletView3.image = UIImage(named: bullet == 2 ? "circle_full" : "circle_empty")
-            
-            actualBullet = bullet
-        }
+    // Set bullets images depending on the active bullet
+    func updateBulletsImage() {
+        if currentIndex >= maxBullet { return }
+
+        bulletView1.image = UIImage(named: currentIndex == 0 ? "circle_full" : "circle_empty")
+        bulletView2.image = UIImage(named: currentIndex == 1 ? "circle_full" : "circle_empty")
+        bulletView3.image = UIImage(named: currentIndex == 2 ? "circle_full" : "circle_empty")
     }
     
-    
+    // Change image1
     @objc func autoChangeImage1() {
-        //change image in this function
+        // Change image in this function
         imageSlideView1.image = UIImage(named: "tutorial-1-" + String(imageIndexView))
         
         imageIndexView += 1
         
-        if(imageIndexView >= 4) {
+        if imageIndexView >= 4 {
             imageIndexView = 0
         }
     }
     
+    // Change image2
     @objc func autoChangeImage2() {
         //change image in this function
         imageSlideView2.image = UIImage(named: "tutorial-2-" + String(imageIndexView))
         
-        imageIndexView+=1
+        imageIndexView += 1
         
-        if(imageIndexView >= 2) {
+        if imageIndexView >= 2 {
             imageIndexView = 0
         }
     }
     
-    //Détection des clicks sur les bullets
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
+    // Clic detection on bullet
+    @objc func handleBulletTouch(tapGestureRecognizer: UITapGestureRecognizer) {
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         
         switch tappedImage {
-        case bulletView1:
-            setSlide(slide: 0)
-        case bulletView2:
-            setSlide(slide: 1)
-        case bulletView3:
-            setSlide(slide: 2)
-        default:
-            setSlide(slide: 2)
+            case bulletView1:
+                setActiveSlide(index: 0)
+            case bulletView2:
+                setActiveSlide(index: 1)
+            case bulletView3:
+                setActiveSlide(index: 2)
+            default:
+                setActiveSlide(index: 2)
         }
     }
     
-    //Détection du swipe pour avancer dans le tutorial
-    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+    // Swipe detection to go through tutorial
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) {
         if gesture.direction == UISwipeGestureRecognizer.Direction.right {
-            if(actualBullet > 0) {
-                setSlide(slide: actualBullet - 1)
+            if currentIndex > 0 {
+                setActiveSlide(index: currentIndex - 1)
             }
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-            if(actualBullet < maxBullet - 1) {
-                setSlide(slide: actualBullet + 1)
+            if currentIndex < maxBullet - 1 {
+                setActiveSlide(index: currentIndex + 1)
             }
         }
     }

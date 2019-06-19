@@ -11,6 +11,5 @@ import Foundation
 class Recognitazed {
     static let instance = Recognitazed()
  
-    
     var nodes:[String:ImageNode] = [:];
 }

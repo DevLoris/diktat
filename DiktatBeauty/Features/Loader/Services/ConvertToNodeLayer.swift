@@ -11,49 +11,38 @@ import SceneKit
 import ARKit
 
 class ConvertToNodeLayer {
-    static func convertAndPopulate(object:NodeObject) {
+    // Create a new ImageNode and add it to the "Recognizated" singleton
+    static func convertAndPopulate(object: NodeObject) {
         Recognitazed.instance.nodes[object.name] = convert(object: object)
     }
     
-    static func convert(object:NodeObject)->ImageNode {
+    // Convert a NodeObject to an ImageNode
+    static func convert(object: NodeObject) -> ImageNode {
         let n = ImageNode(identifier: object.name, title: object.title, layers: [])
 
+        // Loop over all the layers and instanciate/hydrate them
         object.layers.forEach { (node) in
-            var customNodeLayer:CustomNodeLayer? = nil
+            guard let nodeLayer = guessNodeLayerType(type: node.type) else { return }
             
-            switch node.type {
-            case "video":
-                customNodeLayer = VideoNodeLayer()
-            case "gif":
-                customNodeLayer = ImageGifNodeLayer()
-            case "particles":
-                customNodeLayer = ParticlesNodeLayer()
-            default:
-                customNodeLayer = ImageNodeLayer()
-            }
+            nodeLayer.hydrate(node: node)
             
-            if let nodeLayer = customNodeLayer {
-                nodeLayer.identifier = node.id
-                nodeLayer.material_name = node.material
-                nodeLayer.opacity = node.opacity
-                nodeLayer.hiddenDefault = node.hidden_default
-                nodeLayer.rotation = SCNVector4(node.rotation[0],node.rotation[1],node.rotation[2],0)
-                nodeLayer.position = ARPosition(.RELATIVE, node.position[0], node.position[1], node.position[2])
-                nodeLayer.size = ARSize(width_factor: node.size[0], height_factor:  node.size[1])
-                
-                nodeLayer.touch = []
-                //Events de click
-                node.click_event.forEach({ (click_event) in
-                    let effectFromValue = TouchEventEffects(rawValue: click_event.apply)
-                    if let effect = effectFromValue {
-                        nodeLayer.touch.append(TouchEvent(type: effect, on: click_event.on, duraction: click_event.duration, delay: click_event.delay))
-                    }
-                })
-                
-                n.addLayer(layer: nodeLayer)
-            }
+            n.addLayer(layer: nodeLayer)
         }
 
         return n;
+    }
+    
+    // Guess the type of a NodeLayer for a given type name
+    static func guessNodeLayerType(type: String) -> CustomNodeLayer? {
+        switch type {
+            case "video":
+                return VideoNodeLayer()
+            case "gif":
+                return ImageGifNodeLayer()
+            case "particles":
+                return ParticlesNodeLayer()
+            default:
+                return ImageNodeLayer()
+        }
     }
 }
