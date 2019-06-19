@@ -12,34 +12,29 @@ import Foundation
 import ARKit
 import SceneKit
 
-class ParticlesNodeLayer : CustomNodeLayer {
-    
-    var animation:(SCNNode)->() = {x in}
+class ParticlesNodeLayer: CustomNodeLayer {
+    var animation: (SCNNode) -> Void = {x in}
     
     override func createNode(parent: ARReferenceImage) -> SCNNode?{
-        let scene_plane =  SCNPlane(width: parent.physicalSize.width ,
-                                    height: parent.physicalSize.height  )
+        // Create an invisible material
+        let material = SCNMaterial(color: .clear)
         
-        let plane_node = SCNNode(geometry: scene_plane)
-        scene_plane.firstMaterial = SCNMaterial(color: .clear)
-        plane_node.position = self.position.getLayerPosition(parent: parent, onInit:true)
-        plane_node.rotation = self.rotation
-        plane_node.scale = size.getSize()
+        // Create the scene plane
+        let scenePlane = SCNPlane(width: parent.physicalSize.width, height: parent.physicalSize.height, withMaterial: material)
         
-        plane_node.isHidden = self.hiddenDefault
-        
-        //On set le name
-        plane_node.name = self.identifier
-        
+        // Create the plane node
+        let plane_node = getPlaneNode(scenePlane: scenePlane, parent: parent)
         plane_node.eulerAngles.x = -.pi / 2
         
-        let particles = SCNParticleSystem(named: "Particle.scnp", inDirectory: nil)!
-        particles.emitterShape = scene_plane
+        // Create the particles system and set init values
+        let particles = SCNParticleSystem(named: "Particles.scnp", inDirectory: nil)!
+        particles.emitterShape = scenePlane
         particles.orientationMode = .free
-        particles.particleImage = UIImage(named: self.material_name)
+        particles.particleImage = UIImage(named: self.materialName)
         plane_node.addParticleSystem(particles)
         
-       DispatchQueue.main.async {
+        // Create animation and run action
+        DispatchQueue.main.async {
             self.animation(plane_node)
             let finalPosition = self.position.getLayerPosition(parent: parent, onInit: false)
             let action = SCNAction.moveBy(x: CGFloat(finalPosition.x), y: CGFloat(finalPosition.y), z: CGFloat(finalPosition.z), duration: 1)
@@ -49,10 +44,5 @@ class ParticlesNodeLayer : CustomNodeLayer {
         node = plane_node
         
         return plane_node
-    }
-    
-    
-    func getIdentifier() -> String {
-        return identifier;
     }
 }

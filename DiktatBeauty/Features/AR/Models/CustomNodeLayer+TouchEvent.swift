@@ -11,48 +11,46 @@ import SceneKit
 import ARKit
 
 extension CustomNodeLayer {
-    func touchEvent(parent:ImageNode) {
-        print(self.identifier)
+    func touchEvent(parent: ImageNode) {
+        print("Touched: " + self.identifier)
         self.executeTouchEvent(parent: parent) 
     }
     
-    private func executeTouchEvent(parent:ImageNode) {
-        touch.forEach { (touch_item) in
-            var target:CustomNodeLayer? = nil
-            if(touch_item.on == "this") {
-                target = self
-            }
-            else {
-                target = parent.getLayerById(identifier: touch_item.on)
+    private func executeTouchEvent(parent: ImageNode) {
+        touch.forEach { touchItem in
+            var target: CustomNodeLayer? = self
+            
+            if touchItem.on != "this" {
+                target = parent.getLayerById(identifier: touchItem.on)
             }
             
-            if let t = target, let node = t.node {
-                switch touch_item.type {
+            guard
+                let t = target,
+                let node = t.node
+                else { return }
+            
+            let wait = SCNAction.wait(duration: Double(touchItem.delay))
+            var action: SCNAction? = nil
+            
+            switch touchItem.type {
                 case .NONE:
-                    return;
+                    return
                 case .FADEIN:
-                    let w = SCNAction.wait(duration: Double(touch_item.delay))
-                    let f = SCNAction.fadeOpacity(to: CGFloat(t.opacity), duration: Double(touch_item.duraction))
-                    node.runAction(SCNAction.sequence([w,f]))
-                    return;
+                    action = SCNAction.fadeOpacity(to: CGFloat(t.opacity), duration: Double(touchItem.duration))
+                    break
                 case .FADEOUT:
-                    let w = SCNAction.wait(duration: Double(touch_item.delay))
-                    let f = SCNAction.fadeOpacity(to: CGFloat(0), duration: Double(touch_item.duraction))
-                    node.runAction(SCNAction.sequence([w,f]))
-                    return;
+                    action = SCNAction.fadeOpacity(to: CGFloat(0), duration: Double(touchItem.duration))
+                    break
                 case .SHOW:
-                    let w = SCNAction.wait(duration: Double(touch_item.delay))
-                    let f = SCNAction.unhide()
-                    node.runAction(SCNAction.sequence([w,f]))
-                    return;
+                    action = SCNAction.unhide()
+                    break
                 case .HIDE:
-                    let w = SCNAction.wait(duration: Double(touch_item.delay))
-                    let f = SCNAction.hide()
-                    node.runAction(SCNAction.sequence([w,f])) 
-                    return;
-                default:
-                    return;
-                }
+                    action = SCNAction.hide()
+                    break
+            }
+            
+            if let animationAction = action {
+                node.runAction(SCNAction.sequence([wait, animationAction]))
             }
         }
     }

@@ -9,8 +9,8 @@
 import Foundation
 
 struct TouchEvent {
-    var type:TouchEventEffects
-    var on:String
-    var duraction:Float
-    var delay:Float
+    var type: TouchEventEffects
+    var on: String
+    var duration: Float
+    var delay: Float
 }

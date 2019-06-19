@@ -11,50 +11,49 @@ import ARKit
 import SceneKit
 
 class ImageNode {
-    var identifier:String = ""
-    var title:String = ""
-    var text:String = ""
-    var layers:[CustomNodeLayer]?;
-    var nodes:[SCNNode]? = nil
+    var identifier = ""
+    var title = ""
+    var text = ""
+    var layers: [CustomNodeLayer]?
+    var nodes: [SCNNode]? = nil
     var rendered = false
     
-    init(identifier: String, title: String, layers:[CustomNodeLayer], text: String = "") {
+    init(identifier: String, title: String, layers: [CustomNodeLayer], text: String = "") {
         self.identifier = identifier
         self.title = title
+        self.layers = layers
         self.text = text
-        self.layers = layers;
     }
     
-    init(layers:[CustomNodeLayer]) {
-        self.layers = layers;
+    init(layers: [CustomNodeLayer]) {
+        self.layers = layers
     }
     
-    func addLayer(layer:CustomNodeLayer) {
-        self.layers?.append(layer);
+    func addLayer(layer: CustomNodeLayer) {
+        self.layers?.append(layer)
     }
     
-    func createNodes(parent : ARReferenceImage) -> [SCNNode] {
-        if nodes == nil {
-            var nodes_temp:[SCNNode] = []
-            self.layers?.forEach {  node in
-                if let n = node.createNode(parent: parent) {
-                    nodes_temp.append(n)
-                }
-            }
-            
-            nodes = nodes_temp
-        }
+    // Create all layers
+    func createNodes(parent: ARReferenceImage) -> [SCNNode] {
+        if let allNodes = nodes { return allNodes }
         
+        var tempNodes: [SCNNode] = []
+        
+        self.layers?.forEach { node in
+            if let n = node.createNode(parent: parent) {
+                tempNodes.append(n)
+            }
+        }
     
-        return nodes!;
+        return tempNodes
     }
     
     func getLayers() -> [CustomNodeLayer]? {
         return self.layers
     }
     
-    func getLayerById(identifier:String) -> CustomNodeLayer? {
-        return self.layers?.first(where: { (p) -> Bool in
+    func getLayerById(identifier: String) -> CustomNodeLayer? {
+        return self.layers?.first(where: { p -> Bool in
             return p.identifier == identifier
         })
     }
