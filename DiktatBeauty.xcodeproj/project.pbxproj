@@ -17,6 +17,9 @@
 		9AF2BAFE22B406FB00D9D48C /* ParticlesNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */; };
 		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
 		D210364422BA214000C03949 /* HistoryArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D210364322BA214000C03949 /* HistoryArticleViewController.swift */; };
+		D210364722BA558800C03949 /* ScannedParticles.scnp in Resources */ = {isa = PBXBuildFile; fileRef = D210364522BA558800C03949 /* ScannedParticles.scnp */; };
+		D210364822BA558800C03949 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D210364622BA558800C03949 /* star.png */; };
+		D210364B22BA576C00C03949 /* ScanParticleNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D210364A22BA576C00C03949 /* ScanParticleNodeLayer.swift */; };
 		D21469DC22A143E400B75A3E /* HistoryVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21469DB22A143E400B75A3E /* HistoryVars.swift */; };
 		D24455B8228BEB3000096BE5 /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455B7228BEB3000096BE5 /* TouchEvent.swift */; };
 		D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */; };
@@ -82,6 +85,9 @@
 		C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchEvent.swift"; sourceTree = "<group>"; };
 		D210364322BA214000C03949 /* HistoryArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryArticleViewController.swift; sourceTree = "<group>"; };
+		D210364522BA558800C03949 /* ScannedParticles.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = ScannedParticles.scnp; sourceTree = "<group>"; };
+		D210364622BA558800C03949 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		D210364A22BA576C00C03949 /* ScanParticleNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanParticleNodeLayer.swift; sourceTree = "<group>"; };
 		D21469DB22A143E400B75A3E /* HistoryVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVars.swift; sourceTree = "<group>"; };
 		D24455B7228BEB3000096BE5 /* TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEvent.swift; sourceTree = "<group>"; };
 		D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomNodeLayer+TouchEvent.swift"; sourceTree = "<group>"; };
@@ -185,6 +191,17 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D210364922BA565C00C03949 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				D29A277D22AA93BC00216D5C /* Particles.scnp */,
+				D210364622BA558800C03949 /* star.png */,
+				D210364522BA558800C03949 /* ScannedParticles.scnp */,
+				D29A277C22AA93BC00216D5C /* spark.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		D24455BD228BF1CD00096BE5 /* Loader */ = {
 			isa = PBXGroup;
 			children = (
@@ -285,11 +302,10 @@
 		D28594FD2265CC2B00A967C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D210364922BA565C00C03949 /* Particles */,
 				D2F176F02299278A007D4841 /* Fonts */,
 				D2D0D9F5228AAFA400B32B24 /* test.gif */,
 				D28594F02265CBF500A967C8 /* Assets.xcassets */,
-				D29A277C22AA93BC00216D5C /* spark.png */,
-				D29A277D22AA93BC00216D5C /* Particles.scnp */,
 				D28594F22265CBF500A967C8 /* LaunchScreen.storyboard */,
 				D28594ED2265CBF400A967C8 /* Main.storyboard */,
 			);
@@ -330,6 +346,7 @@
 				D2D0D9F3228AA06A00B32B24 /* CustomNodeLayer.swift */,
 				D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */,
 				9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */,
+				D210364A22BA576C00C03949 /* ScanParticleNodeLayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -517,10 +534,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */,
+				D210364822BA558800C03949 /* star.png in Resources */,
 				D2F176F4229927CD007D4841 /* BluuNext-Bolditalic.otf in Resources */,
 				D28594F42265CBF500A967C8 /* LaunchScreen.storyboard in Resources */,
 				D29A277F22AA93BC00216D5C /* Particles.scnp in Resources */,
 				D29A277E22AA93BC00216D5C /* spark.png in Resources */,
+				D210364722BA558800C03949 /* ScannedParticles.scnp in Resources */,
 				D28594F12265CBF500A967C8 /* Assets.xcassets in Resources */,
 				D2F176F3229927CB007D4841 /* BluuNext-Bold.otf in Resources */,
 				D28594EF2265CBF400A967C8 /* Main.storyboard in Resources */,
@@ -618,6 +637,7 @@
 				D285950D2265CEF000A967C8 /* VideoNodeLayer.swift in Sources */,
 				D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				D2F176FC22992F23007D4841 /* HistoryFormat.swift in Sources */,
+				D210364B22BA576C00C03949 /* ScanParticleNodeLayer.swift in Sources */,
 				D2F176F622992D75007D4841 /* HistoryViewController.swift in Sources */,
 				D289EB9822A7B2D00089B56B /* HistoryPosterTableViewCell.swift in Sources */,
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,

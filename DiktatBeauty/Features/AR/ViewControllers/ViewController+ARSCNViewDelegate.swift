@@ -93,13 +93,19 @@ extension ViewController : ARSCNViewDelegate {
             
             posterNode?.rendered = false
             
-            
             DispatchQueue.main.async {
                 self.detailsButton.isHidden = true
             }
         }
         
         self.timer.invalidate()
+    }
+    
+    func createScanParticle(_  ref: ARReferenceImage) -> SCNNode {
+        
+        let scan = ScanParticlesNodeLayer(identifier: "scan", materialName: "star", position: ARPosition(.RELATIVE, 0, 0, 0))
+        
+        return scan.createNode(parent: ref)!
     }
     
     func renderDetectedPoster(referenceImage: ARReferenceImage, renderer: SCNSceneRenderer, node: SCNNode, anchor: ARAnchor) {
@@ -110,6 +116,10 @@ extension ViewController : ARSCNViewDelegate {
             else { return }
             
             posterNode.rendered = true
+            
+            // Create a Scan Node Particle on wait
+            let scan = self.createScanParticle(referenceImage)
+            node.addChildNode(scan)
             
             // Generate all the nodes of the detected poster
             let generatedNodes = posterNode.createNodes(parent: referenceImage)
@@ -122,6 +132,10 @@ extension ViewController : ARSCNViewDelegate {
                     }
                 }
             })
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                scan.isHidden = true
+            }
             
             // Add the poster in the history
             Historized.instance.addViewedPoster(posterNode)
