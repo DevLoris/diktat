@@ -12,46 +12,41 @@ import ARKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var imageNameLabel: UILabel!
     @IBOutlet weak var sceneView: ARSCNView!
     
-    //Timer utilisé pour le reset des images au bout de X secondes (si hors-screen)
+    // Timer used for the images reset after X seconds (if out of screen)
     var timer: Timer!
     
-    //Identifiant de l'ancre actuelle, pour voir si elle diffère plus tard
-    var currentAnchorIdentifier : UUID?
+    // Identifier of the current anchor, used to check if the anchor changes later
+    var currentAnchorIdentifier: UUID?
     
-    //Identifiant de la node actuelle
-    var actualNode:String? = nil
+    // Identifier of the current Node
+    var actualNode: String? = nil
     
 
-    let updateQueue = DispatchQueue(label: Bundle.main.bundleIdentifier! +
-        ".serialSceneKitQueue")
+    let updateQueue = DispatchQueue(label: Bundle.main.bundleIdentifier! + ".serialSceneKitQueue")
     
     var session: ARSession {
         return sceneView.session
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
          
-        let loaded = ["anorexia", "maquillage"]
-        loaded.forEach { (name) in
+        let availablePosters = ["anorexia", "maquillage"]
+        
+        // Load all available posters as from the api's JSONs
+        availablePosters.forEach { (name) in
             NetworkManager.instance.getJson(name: name) { (node) in
-                //Check si la node existe bien
                 if let n = node {
-                    //On converti la node et on l'ajoute au RECOGNIZATER
+                    // Convert the node and add it to the RECOGNIZATER
                     ConvertToNodeLayer.convertAndPopulate(object: n)
                 }
             } 
         }
         
         loadSessionDelegate()
-        // Do any additional setup after loading the view.
     }
-
-
     
     var isRestartAvailable = true
     

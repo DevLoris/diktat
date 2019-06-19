@@ -8,7 +8,7 @@ class Historized {
     
     var viewed:[String:ImageNode] = [:];
     
-    func addViewedImage(imageNode: ImageNode) {
-        self.viewed[imageNode.identifier] = imageNode
+    func addViewedPoster(_ node: ImageNode) {
+        self.viewed[node.identifier] = node
     }
 }
