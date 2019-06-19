@@ -24,7 +24,7 @@ class HistoryViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-     
+      
     @IBAction func closeButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -37,6 +37,11 @@ class HistoryViewController: UIViewController {
                     Array(Recognitazed.instance.nodes)[clickedItem].value
             }
         }
+        if(segue.identifier == "toHistoryArticle") {
+            if let destinationViewController = segue.destination as? HistoryArticleViewController {
+                destinationViewController.node = (Array(Recognitazed.instance.nodes)[clickedItem].value)
+            }
+        }
     }
 }
 
@@ -45,7 +50,7 @@ class HistoryViewController: UIViewController {
 extension HistoryViewController:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         clickedItem = indexPath.item
-        self.performSegue(withIdentifier: "toHistoryDetails", sender: self)
+        self.performSegue(withIdentifier: "toHistoryArticle", sender: self)
     }
 }
 
@@ -56,7 +61,7 @@ extension HistoryViewController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let collectionViewWidth = collectionView.bounds.width
-        return CGSize(width: collectionViewWidth/2 - 10, height: collectionViewWidth/1.5)
+        return CGSize(width: collectionViewWidth/3 - 10, height: collectionViewWidth/2.3)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
