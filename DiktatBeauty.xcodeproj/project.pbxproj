@@ -12,6 +12,7 @@
 		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
 		9AF2BAFE22B406FB00D9D48C /* ParticlesNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */; };
 		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
+		D210364422BA214000C03949 /* HistoryArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D210364322BA214000C03949 /* HistoryArticleViewController.swift */; };
 		D21469DC22A143E400B75A3E /* HistoryVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21469DB22A143E400B75A3E /* HistoryVars.swift */; };
 		D24455B8228BEB3000096BE5 /* TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455B7228BEB3000096BE5 /* TouchEvent.swift */; };
 		D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */; };
@@ -72,6 +73,7 @@
 		B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeauty.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchEvent.swift"; sourceTree = "<group>"; };
+		D210364322BA214000C03949 /* HistoryArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryArticleViewController.swift; sourceTree = "<group>"; };
 		D21469DB22A143E400B75A3E /* HistoryVars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVars.swift; sourceTree = "<group>"; };
 		D24455B7228BEB3000096BE5 /* TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchEvent.swift; sourceTree = "<group>"; };
 		D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomNodeLayer+TouchEvent.swift"; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 			children = (
 				D2F176F522992D75007D4841 /* HistoryViewController.swift */,
 				D289EB9522A7B26D0089B56B /* HistoryDetailsViewController.swift */,
+				D210364322BA214000C03949 /* HistoryArticleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				D2F176FA22992EC9007D4841 /* Historized.swift in Sources */,
 				D24455C8228BF79200096BE5 /* NodeObject.swift in Sources */,
 				D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */,
+				D210364422BA214000C03949 /* HistoryArticleViewController.swift in Sources */,
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
@@ -784,14 +788,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DSXB7SLR55;
+				DEVELOPMENT_TEAM = 5P2JB4N3W3;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = duval.dev.DiktatBeauty;
+				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -804,14 +808,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DSXB7SLR55;
+				DEVELOPMENT_TEAM = 5P2JB4N3W3;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = duval.dev.DiktatBeauty;
+				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

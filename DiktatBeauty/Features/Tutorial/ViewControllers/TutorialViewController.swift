@@ -126,6 +126,7 @@ class TutorialViewController: UIViewController {
     // Translate to every slide except the first one
     func initSlidesPosition() {
         let sliderWidth = sliderView.frame.width
+        print(sliderWidth, sliderView.frame.size)
         
         for (index, element) in slides.enumerated() {
             if index != 0 {
