@@ -11,6 +11,8 @@ import ARKit
 import SceneKit
 
 class ImageGifNodeLayer: CustomNodeLayer {
+    var animation: (SCNNode) -> Void = {x in}
+    
     override func createNode(parent: ARReferenceImage) -> SCNNode {
         let gifImageURL = Bundle.main.url(forResource: self.materialName, withExtension: "gif")
         let animation = GifHelper.getKeyfraymeAnimation(url: gifImageURL!)!
@@ -32,6 +34,20 @@ class ImageGifNodeLayer: CustomNodeLayer {
             withMaterial: material
         )
         
-        return getPlaneNode(scenePlane: scenePlane, parent: parent)
+        // Create the node
+        let planeNode = getPlaneNode(scenePlane: scenePlane, parent: parent)
+        planeNode.eulerAngles.x = -.pi / 2
+        
+        // Create animation and run action
+        DispatchQueue.main.async {
+            self.animation(planeNode)
+            let finalPosition = self.position.getLayerPosition(parent: parent, onInit: false)
+            let action = SCNAction.moveBy(x: CGFloat(finalPosition.x), y: CGFloat(finalPosition.y), z: CGFloat(finalPosition.z), duration: 1)
+            planeNode.runAction(action)
+        }
+        
+        node = planeNode
+        
+        return planeNode
     }
 }
