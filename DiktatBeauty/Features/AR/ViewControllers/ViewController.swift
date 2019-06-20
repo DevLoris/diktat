@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     // Identifier of the current Node
     var actualNode: String? = nil
     
-
     let updateQueue = DispatchQueue(label: Bundle.main.bundleIdentifier! + ".serialSceneKitQueue")
     
     var session: ARSession {
@@ -35,7 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          
-        let availablePosters = ["anorexia", "maquillage"]
+        let availablePosters = ["makeup"]
         
         // Load all available posters as from the api's JSONs
         availablePosters.forEach { (name) in
