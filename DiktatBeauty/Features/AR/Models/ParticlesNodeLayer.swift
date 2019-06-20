@@ -5,15 +5,17 @@
 //  Created by Hugo on 14/06/2019.
 //  Copyright © 2019 Loris Pinna. All rights reserved.
 //
-
-import Foundation
-
+ 
 import Foundation
 import ARKit
 import SceneKit
 
 class ParticlesNodeLayer: CustomNodeLayer {
     var animation: (SCNNode) -> Void = {x in}
+    var particleFile:String {
+        get { return "Particles.scnp" }
+    }
+    
     
     override func createNode(parent: ARReferenceImage) -> SCNNode?{
         // Create an invisible material
@@ -27,7 +29,7 @@ class ParticlesNodeLayer: CustomNodeLayer {
         plane_node.eulerAngles.x = -.pi / 2
         
         // Create the particles system and set init values
-        let particles = SCNParticleSystem(named: "Particles.scnp", inDirectory: nil)!
+        let particles = SCNParticleSystem(named: particleFile, inDirectory: nil)!
         particles.emitterShape = scenePlane
         particles.orientationMode = .free
         particles.particleImage = UIImage(named: self.materialName)
