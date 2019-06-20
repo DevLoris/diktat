@@ -11,6 +11,7 @@ import Foundation
 struct NodeObject: Decodable {
     var name: String
     var title: String
+    var text: String
     var layers: [NodeObjectNodes]
 }
 

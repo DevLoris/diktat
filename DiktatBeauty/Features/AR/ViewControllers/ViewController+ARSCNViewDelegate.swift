@@ -92,10 +92,6 @@ extension ViewController : ARSCNViewDelegate {
             })
             
             posterNode?.rendered = false
-            
-            DispatchQueue.main.async {
-                self.detailsButton.isHidden = true
-            }
         }
         
         self.timer.invalidate()
@@ -141,7 +137,7 @@ extension ViewController : ARSCNViewDelegate {
             Historized.instance.addViewedPoster(posterNode)
             
             DispatchQueue.main.async {
-                self.detailsButton.isHidden = false
+                self.detailsButton.isHidden = false 
             }
             self.actualNode =  referenceImage.name ?? ""
             self.currentAnchorIdentifier = anchor.identifier

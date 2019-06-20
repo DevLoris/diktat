@@ -117,7 +117,7 @@ class CustomNodeLayer {
     }
     
     // Hydrate NodeLayer properties from a NodeObject item
-    func hydrate(node: NodeObjectNodes) {
+    func hydrate(node: NodeObjectNodes) { 
         self.identifier = node.id
         self.materialName = node.material
         self.opacity = node.opacity

@@ -28,7 +28,7 @@ class HistoryArticleViewController: UIViewController {
         mainTitle.text = node.title
         transparentTitle.text = node.title
         articleText.text = node.text
-        //posterImageView.image = UIImage(named: node.identifier + "__poster")
+        posterImageView.image = UIImage(named: node.identifier + "__poster")
     }
     
 
