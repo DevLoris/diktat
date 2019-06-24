@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		0830474315252ABA7B9A457F /* Pods_DiktatBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */; };
 		64BB44E93F7B634818FEF4C5 /* Pods_DiktatBeautyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */; };
-		9A10306122BA5C9C00CB80CF /* makeup_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10305F22BA5C9C00CB80CF /* makeup_title.gif */; };
 		9A10306422BA631000CB80CF /* makeup_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306322BA631000CB80CF /* makeup_mirror.gif */; };
 		9A10306622BA6F2300CB80CF /* makeup_woman_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */; };
 		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
+		9ABD91E622BB905F000E0DAD /* anorexia_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E522BB905F000E0DAD /* anorexia_title.gif */; };
+		9ABD91E822BBC9AE000E0DAD /* makeup_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */; };
 		9AC1FA5F22BA083E003FD733 /* SCNMaterial+ImageInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1FA5E22BA083E003FD733 /* SCNMaterial+ImageInit.swift */; };
 		9AC1FA6122BA0970003FD733 /* SCNPlane+Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1FA6022BA0970003FD733 /* SCNPlane+Material.swift */; };
 		9AD7A01022BA169E00ACA73D /* SCNNode+FullInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A00F22BA169E00ACA73D /* SCNNode+FullInit.swift */; };
@@ -78,10 +79,11 @@
 		2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.release.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.release.xcconfig"; sourceTree = "<group>"; };
 		371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeautyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9A10305F22BA5C9C00CB80CF /* makeup_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_title.gif; sourceTree = "<group>"; };
 		9A10306322BA631000CB80CF /* makeup_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_mirror.gif; sourceTree = "<group>"; };
 		9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_woman_mirror.gif; sourceTree = "<group>"; };
 		9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+Color.swift"; sourceTree = "<group>"; };
+		9ABD91E522BB905F000E0DAD /* anorexia_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anorexia_title.gif; sourceTree = "<group>"; };
+		9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_title.gif; sourceTree = "<group>"; };
 		9AC1FA5E22BA083E003FD733 /* SCNMaterial+ImageInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+ImageInit.swift"; sourceTree = "<group>"; };
 		9AC1FA6022BA0970003FD733 /* SCNPlane+Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNPlane+Material.swift"; sourceTree = "<group>"; };
 		9AD7A00F22BA169E00ACA73D /* SCNNode+FullInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+FullInit.swift"; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		9A10305E22BA5C7200CB80CF /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				9ABD91E422BB904A000E0DAD /* Anorexia */,
 				9ABD91E322BB748A000E0DAD /* Makeup */,
 			);
 			path = Gifs;
@@ -201,10 +204,18 @@
 			isa = PBXGroup;
 			children = (
 				9A10306322BA631000CB80CF /* makeup_mirror.gif */,
-				9A10305F22BA5C9C00CB80CF /* makeup_title.gif */,
+				9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */,
 				9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */,
 			);
 			path = Makeup;
+			sourceTree = "<group>";
+		};
+		9ABD91E422BB904A000E0DAD /* Anorexia */ = {
+			isa = PBXGroup;
+			children = (
+				9ABD91E522BB905F000E0DAD /* anorexia_title.gif */,
+			);
+			path = Anorexia;
 			sourceTree = "<group>";
 		};
 		9AD7A01122BA20F400ACA73D /* Helpers */ = {
@@ -560,17 +571,18 @@
 			files = (
 				9A10306422BA631000CB80CF /* makeup_mirror.gif in Resources */,
 				D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */,
+				9ABD91E622BB905F000E0DAD /* anorexia_title.gif in Resources */,
 				D210364822BA558800C03949 /* star.png in Resources */,
 				D2F176F4229927CD007D4841 /* BluuNext-Bolditalic.otf in Resources */,
 				D28594F42265CBF500A967C8 /* LaunchScreen.storyboard in Resources */,
 				9A10306622BA6F2300CB80CF /* makeup_woman_mirror.gif in Resources */,
 				D29A277F22AA93BC00216D5C /* Particles.scnp in Resources */,
+				9ABD91E822BBC9AE000E0DAD /* makeup_title.gif in Resources */,
 				D29A277E22AA93BC00216D5C /* spark.png in Resources */,
 				D210364722BA558800C03949 /* ScannedParticles.scnp in Resources */,
 				D28594F12265CBF500A967C8 /* Assets.xcassets in Resources */,
 				D2F176F3229927CB007D4841 /* BluuNext-Bold.otf in Resources */,
 				D28594EF2265CBF400A967C8 /* Main.storyboard in Resources */,
-				9A10306122BA5C9C00CB80CF /* makeup_title.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

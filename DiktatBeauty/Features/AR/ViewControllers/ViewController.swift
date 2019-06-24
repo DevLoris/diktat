@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          
-        let availablePosters = ["makeup"]
+        let availablePosters = ["makeup", "anorexia"]
         
         // Load all available posters as from the api's JSONs
         availablePosters.forEach { (name) in
