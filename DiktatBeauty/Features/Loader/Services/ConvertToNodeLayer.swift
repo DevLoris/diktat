@@ -18,7 +18,7 @@ class ConvertToNodeLayer {
     
     // Convert a NodeObject to an ImageNode
     static func convert(object: NodeObject) -> ImageNode {
-        let n = ImageNode(identifier: object.name, title: object.title, layers: [])
+        let n = ImageNode(identifier: object.name, title: object.title, layers: [], text: object.text, subtitle: object.subtitle)
 
         // Loop over all the layers and instanciate/hydrate them
         object.layers.forEach { (node) in
