@@ -11,6 +11,7 @@
 		64BB44E93F7B634818FEF4C5 /* Pods_DiktatBeautyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */; };
 		9A10306422BA631000CB80CF /* makeup_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306322BA631000CB80CF /* makeup_mirror.gif */; };
 		9A10306622BA6F2300CB80CF /* makeup_woman_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */; };
+		9A4D624B22C1595000D81963 /* HistorySubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */; };
 		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
 		9ABD91E622BB905F000E0DAD /* anorexia_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E522BB905F000E0DAD /* anorexia_title.gif */; };
 		9ABD91E822BBC9AE000E0DAD /* makeup_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */; };
@@ -81,6 +82,7 @@
 		8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9A10306322BA631000CB80CF /* makeup_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_mirror.gif; sourceTree = "<group>"; };
 		9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_woman_mirror.gif; sourceTree = "<group>"; };
+		9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+Color.swift"; sourceTree = "<group>"; };
 		9ABD91E522BB905F000E0DAD /* anorexia_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anorexia_title.gif; sourceTree = "<group>"; };
 		9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_title.gif; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				D2F176F722992E7D007D4841 /* HistoryCollectionViewCell.swift */,
 				D289EB9722A7B2D00089B56B /* HistoryPosterTableViewCell.swift */,
 				D289EB9922A7B3300089B56B /* HistoryTextTableViewCell.swift */,
+				9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				D2F176FA22992EC9007D4841 /* Historized.swift in Sources */,
 				D24455C8228BF79200096BE5 /* NodeObject.swift in Sources */,
 				D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */,
+				9A4D624B22C1595000D81963 /* HistorySubtitleTableViewCell.swift in Sources */,
 				D210364422BA214000C03949 /* HistoryArticleViewController.swift in Sources */,
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,

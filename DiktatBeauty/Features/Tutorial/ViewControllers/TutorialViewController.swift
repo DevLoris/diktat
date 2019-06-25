@@ -28,6 +28,8 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var slideView3: UIView!
     @IBOutlet weak var imageSlideView3: UIImageView!
     
+    @IBOutlet weak var closeIconWidth: NSLayoutConstraint!
+    
     // Keeping image timer (used for image 1, to animate the motion)
     var imageChangeTimer: Timer? = nil
     var imageIndexView = 0
@@ -53,6 +55,8 @@ class TutorialViewController: UIViewController {
         // Activating the first slide
         setActiveSlide(index: 0)
         initSlidesPosition()
+        
+        initCloseIconWidth()
     }
     
     // Adding touch event on every "bullet" item
@@ -198,6 +202,15 @@ class TutorialViewController: UIViewController {
         }
     }
     
+    func initCloseIconWidth() {
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            closeIconWidth.constant = 48
+            break
+        default:
+            closeIconWidth.constant = 24
+        }
+    }
     
     @IBAction func dismissTutorialButton(_ sender: Any) {
         performSegue(withIdentifier: "ar-view", sender: self)

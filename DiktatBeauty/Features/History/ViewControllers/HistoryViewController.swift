@@ -11,6 +11,7 @@ import UIKit
 class HistoryViewController: UIViewController {
 
     @IBOutlet weak var historyCollectionView: UICollectionView!
+    @IBOutlet weak var closeIconWidth: NSLayoutConstraint!
     
     var clickedItem = 0
     
@@ -20,9 +21,13 @@ class HistoryViewController: UIViewController {
         historyCollectionView.delegate = self
         historyCollectionView.dataSource = self
         
-        
-
-        // Do any additional setup after loading the view.
+        switch UIDevice.current.userInterfaceIdiom {
+        case .pad:
+            closeIconWidth.constant = 48
+            break
+        default:
+            closeIconWidth.constant = 24
+        }
     }
       
     @IBAction func closeButton(_ sender: Any) {
@@ -31,16 +36,11 @@ class HistoryViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "toHistoryDetails") {
-            if let destinationViewController = segue.destination as? HistoryDetailsViewController {
-                destinationViewController.node =
-                    Array(Recognitazed.instance.nodes)[clickedItem].value
-            }
-        }
-        if(segue.identifier == "toHistoryArticle") {
-            if let destinationViewController = segue.destination as? HistoryArticleViewController {
-                destinationViewController.node = (Array(Recognitazed.instance.nodes)[clickedItem].value)
-            }
+        guard segue.identifier == "toHistoryDetails" else { return }
+        
+        if let destinationViewController = segue.destination as? HistoryDetailsViewController {
+            destinationViewController.node =
+                Array(Recognitazed.instance.nodes)[clickedItem].value
         }
     }
 }
@@ -50,7 +50,7 @@ class HistoryViewController: UIViewController {
 extension HistoryViewController:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         clickedItem = indexPath.item
-        self.performSegue(withIdentifier: "toHistoryArticle", sender: self)
+        self.performSegue(withIdentifier: "toHistoryDetails", sender: self)
     }
 }
 
