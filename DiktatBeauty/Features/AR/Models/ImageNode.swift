@@ -14,15 +14,17 @@ class ImageNode {
     var identifier = ""
     var title = ""
     var text = ""
+    var subtitle = ""
     var layers: [CustomNodeLayer]?
     var nodes: [SCNNode]? = nil
     var rendered = false
     
-    init(identifier: String, title: String, layers: [CustomNodeLayer], text: String = "") {
+    init(identifier: String, title: String, layers: [CustomNodeLayer], text: String = "", subtitle: String = "") {
         self.identifier = identifier
         self.title = title
         self.layers = layers
         self.text = text
+        self.subtitle = subtitle
     }
     
     init(layers: [CustomNodeLayer]) {

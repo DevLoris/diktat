@@ -21,7 +21,6 @@ class ImageGifNodeLayer: CustomNodeLayer {
         let layer = CALayer()
         layer.bounds = CGRect(x: 0, y: 0, width: 1000, height: 1000)
         layer.anchorPoint = CGPoint(x: 0.0, y: 1.0)
-        layer.add(animation, forKey: "contents")
         
         // Create material for the scene plane with the GIF layer
         let material = SCNMaterial();
@@ -40,6 +39,8 @@ class ImageGifNodeLayer: CustomNodeLayer {
         
         // Create animation and run action
         DispatchQueue.main.async {
+            layer.add(animation, forKey: "contents")
+            
             self.animation(planeNode)
             let finalPosition = self.position.getLayerPosition(parent: parent, onInit: false)
             let action = SCNAction.moveBy(x: CGFloat(finalPosition.x), y: CGFloat(finalPosition.y), z: CGFloat(finalPosition.z), duration: 1)

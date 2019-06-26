@@ -119,7 +119,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="diktat." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMY-Al-a80">
-                                <rect key="frame" x="437.5" y="60" width="149.5" height="59"/>
+                                <rect key="frame" x="437.5" y="60" width="149" height="59"/>
                                 <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="49"/>
                                 <color key="textColor" red="0.67290722150000004" green="0.053295842760000003" blue="0.13405942279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -154,7 +154,6 @@
                                 </constraints>
                                 <state key="normal" title="x" image="close"/>
                                 <connections>
-                                    <action selector="close:" destination="p7u-AV-UM7" eventType="touchUpInside" id="Rym-iF-IVA"/>
                                     <action selector="closeButton:" destination="ADZ-gk-fqn" eventType="touchUpInside" id="Bm9-dY-2TX"/>
                                     <action selector="dismissTutorialButton:" destination="m8Z-ih-LXO" eventType="touchUpInside" id="H3c-Ps-Gue"/>
                                 </connections>
@@ -185,6 +184,7 @@
                         <outlet property="bulletView1" destination="9xM-Kj-nyL" id="7R6-8k-WJY"/>
                         <outlet property="bulletView2" destination="E92-ja-a74" id="Tu8-F7-G2J"/>
                         <outlet property="bulletView3" destination="KnH-UW-UaQ" id="aCX-7J-8xq"/>
+                        <outlet property="closeIconWidth" destination="xQY-xj-zas" id="Jjb-tm-uVo"/>
                         <outlet property="imageSlideView1" destination="W2M-eh-euf" id="yhV-Lh-hbc"/>
                         <outlet property="imageSlideView2" destination="Ck7-cL-zot" id="i1n-9C-xWz"/>
                         <outlet property="imageSlideView3" destination="t0z-mP-QBQ" id="Zi8-BE-UIS"/>
@@ -207,8 +207,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-Pu-kFc">
-                                <rect key="frame" x="0.0" y="-20" width="1024" height="1400"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-Pu-kFc">
+                                <rect key="frame" x="0.0" y="-17" width="1024" height="1400"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHA-yw-bgg">
                                 <rect key="frame" x="920" y="1262" width="84" height="84"/>
@@ -230,7 +230,7 @@
                                 <state key="normal" title="COLLECTION" image="details"/>
                                 <connections>
                                     <action selector="openDetailsFromAR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="utz-Yc-CUA"/>
-                                    <segue destination="p7u-AV-UM7" kind="presentation" identifier="fromARToDetails" id="UMg-ea-nZm"/>
+                                    <segue destination="GA2-hp-bkH" kind="presentation" identifier="fromARToDetails" id="5tS-y4-oS6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -339,14 +339,13 @@
                                 </collectionReusableView>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQU-Ka-ANs">
-                                <rect key="frame" x="944" y="60" width="48" height="50"/>
+                                <rect key="frame" x="944" y="64.5" width="48" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="NxF-as-fwn"/>
                                     <constraint firstAttribute="width" secondItem="OQU-Ka-ANs" secondAttribute="height" multiplier="24:25" id="daX-Uw-l66"/>
                                 </constraints>
                                 <state key="normal" title="x" image="close"/>
                                 <connections>
-                                    <action selector="close:" destination="p7u-AV-UM7" eventType="touchUpInside" id="Zud-nt-TwD"/>
                                     <action selector="closeButton:" destination="ADZ-gk-fqn" eventType="touchUpInside" id="YzU-KK-q3y"/>
                                 </connections>
                             </button>
@@ -354,7 +353,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Kgt-dQ-Sei" firstAttribute="trailing" secondItem="OQU-Ka-ANs" secondAttribute="trailing" constant="32" id="3B5-Py-qmJ"/>
-                            <constraint firstItem="OQU-Ka-ANs" firstAttribute="top" secondItem="Kgt-dQ-Sei" secondAttribute="top" constant="36" id="4KV-f5-Rvd"/>
                             <constraint firstItem="Kgt-dQ-Sei" firstAttribute="trailing" secondItem="1ZY-px-bUU" secondAttribute="trailing" id="4Uy-0B-zPi"/>
                             <constraint firstItem="B4U-72-Fz0" firstAttribute="centerX" secondItem="Kgt-dQ-Sei" secondAttribute="centerX" id="5Ez-9s-0ry"/>
                             <constraint firstItem="B4U-72-Fz0" firstAttribute="top" secondItem="Kgt-dQ-Sei" secondAttribute="top" constant="36" id="HA3-Jl-VhY"/>
@@ -362,14 +360,15 @@
                             <constraint firstItem="1ZY-px-bUU" firstAttribute="top" secondItem="B4U-72-Fz0" secondAttribute="bottom" constant="28" id="XIx-Uz-fPw"/>
                             <constraint firstItem="Kgt-dQ-Sei" firstAttribute="bottom" secondItem="1ZY-px-bUU" secondAttribute="bottom" id="bNF-gt-gr5"/>
                             <constraint firstItem="1ZY-px-bUU" firstAttribute="centerX" secondItem="Kgt-dQ-Sei" secondAttribute="centerX" id="pHE-hC-1yN"/>
+                            <constraint firstItem="OQU-Ka-ANs" firstAttribute="centerY" secondItem="B4U-72-Fz0" secondAttribute="centerY" id="riK-LW-5gy"/>
                             <constraint firstItem="1ZY-px-bUU" firstAttribute="leading" secondItem="Kgt-dQ-Sei" secondAttribute="leading" id="xgk-ff-lBg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgt-dQ-Sei"/>
                     </view>
                     <connections>
+                        <outlet property="closeIconWidth" destination="NxF-as-fwn" id="rdM-zd-LIV"/>
                         <outlet property="historyCollectionView" destination="1ZY-px-bUU" id="qS4-Px-gtV"/>
                         <segue destination="GA2-hp-bkH" kind="presentation" identifier="toHistoryDetails" id="jNL-Wx-akW"/>
-                        <segue destination="p7u-AV-UM7" kind="presentation" identifier="toHistoryArticle" id="7cV-HW-C3J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oey-Kr-bJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -385,54 +384,104 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maquillage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60E-Ak-i6E">
-                                <rect key="frame" x="413" y="44" width="198" height="47"/>
-                                <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="39"/>
+                                <rect key="frame" x="395.5" y="44" width="233" height="55.5"/>
+                                <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="46"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kQN-ra-aMN">
-                                <rect key="frame" x="0.0" y="114" width="1024" height="1232"/>
+                                <rect key="frame" x="0.0" y="122.5" width="1024" height="1223.5"/>
                                 <color key="backgroundColor" red="0.67290722150000004" green="0.053295842760000003" blue="0.13405942279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
+                                <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Mnd-g3-5h5">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="posterCell" rowHeight="323" id="QRK-a3-Ykk" customClass="HistoryPosterTableViewCell" customModule="DiktatBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1024" height="323"/>
+                                        <rect key="frame" x="0.0" y="48" width="1024" height="323"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QRK-a3-Ykk" id="pg5-ht-Zpn">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="322.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquillage__poster" translatesAutoresizingMaskIntoConstraints="NO" id="z1u-jr-4iz">
-                                                    <rect key="frame" x="400" y="0.0" width="224" height="322.5"/>
+                                                    <rect key="frame" x="150" y="50" width="114" height="164.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="z1u-jr-4iz" secondAttribute="height" multiplier="52:75" id="kdF-nA-NfV"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.7725490196" green="0.070588235289999995" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstItem="z1u-jr-4iz" firstAttribute="centerY" secondItem="pg5-ht-Zpn" secondAttribute="centerY" id="BQP-sB-9W2"/>
-                                                <constraint firstItem="z1u-jr-4iz" firstAttribute="height" secondItem="pg5-ht-Zpn" secondAttribute="height" id="Pzc-i0-sUm"/>
+                                                <constraint firstAttribute="bottom" secondItem="z1u-jr-4iz" secondAttribute="bottom" id="ANH-ov-1en"/>
+                                                <constraint firstItem="z1u-jr-4iz" firstAttribute="top" secondItem="pg5-ht-Zpn" secondAttribute="top" constant="50" id="MSq-du-KpX"/>
+                                                <constraint firstItem="z1u-jr-4iz" firstAttribute="leading" secondItem="pg5-ht-Zpn" secondAttribute="leading" constant="150" id="Mao-Gw-cX7"/>
+                                                <constraint firstAttribute="trailing" secondItem="z1u-jr-4iz" secondAttribute="trailing" constant="150" id="fe3-Rz-TsV"/>
                                                 <constraint firstItem="z1u-jr-4iz" firstAttribute="centerX" secondItem="pg5-ht-Zpn" secondAttribute="centerX" id="l9E-bg-3up"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftMargin" destination="Mao-Gw-cX7" id="Khz-6c-Oew"/>
+                                            <outlet property="posterImageView" destination="z1u-jr-4iz" id="tNw-tn-STY"/>
+                                            <outlet property="rightMargin" destination="fe3-Rz-TsV" id="sfx-FZ-jZc"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="105" id="5BS-4N-stU" customClass="HistoryTextTableViewCell" customModule="DiktatBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="351" width="1024" height="105"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subtitleCell" rowHeight="105" id="5BS-4N-stU" userLabel="subtitleCell" customClass="HistorySubtitleTableViewCell" customModule="DiktatBeauty" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="371" width="1024" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5BS-4N-stU" id="dKQ-Hc-KBg">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="104.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j1-cD-j9S">
-                                                    <rect key="frame" x="20" y="11" width="984" height="332.5"/>
+                                                    <rect key="frame" x="150" y="0.0" width="114" height="64.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="L'anorexie mentale">
+                                                            <attributes>
+                                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="78" name="BluuNext-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.7725490196" green="0.070588235289999995" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8j1-cD-j9S" secondAttribute="trailing" constant="150" id="H5z-mS-uFj"/>
+                                                <constraint firstItem="8j1-cD-j9S" firstAttribute="top" secondItem="dKQ-Hc-KBg" secondAttribute="top" id="N3I-n6-A5o"/>
+                                                <constraint firstItem="8j1-cD-j9S" firstAttribute="centerX" secondItem="dKQ-Hc-KBg" secondAttribute="centerX" id="SQs-eP-6Lv"/>
+                                                <constraint firstAttribute="bottom" secondItem="8j1-cD-j9S" secondAttribute="bottom" constant="40" id="ctz-hw-LxF"/>
+                                                <constraint firstItem="8j1-cD-j9S" firstAttribute="leading" secondItem="dKQ-Hc-KBg" secondAttribute="leading" constant="150" id="f4Y-XZ-lXb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="leftMargin" destination="f4Y-XZ-lXb" id="426-Lx-3Nw"/>
+                                            <outlet property="rightMargin" destination="H5z-mS-uFj" id="tEp-8M-ySu"/>
+                                            <outlet property="textView" destination="8j1-cD-j9S" id="Gnn-Hd-7q3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="105" id="uGu-ip-eIv" customClass="HistoryTextTableViewCell" customModule="DiktatBeauty" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="476" width="1024" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uGu-ip-eIv" id="fUr-qw-r4b">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="104.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-VA-dfj">
+                                                    <rect key="frame" x="150" y="50" width="114" height="6006.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
                                                             <string key="content">L’anorexie mentale est l’un des plus grand fléau touchant les adolescents occidentaux de 14 à 17 ans. Cette maladie touche majoritairement les adolescentes, en effet, neuf cas sur dix sont des filles[1]. Elle se manifeste par des troubles alimentaires (boulimie, refus de s’alimenter, vomissements volontaires…)et dure en moyenne entre un an et demi et trois ans[1]. Une hyperactivité intellectuelle et physique peut également se manifester. Cette pathologie psychologique est la cause principale de mortalité chez les jeunes. En effet, aucun traitement curatif définitif n’existe encore [2]. De plus, 5 à 15% des patients finissent par en décéder. Cette maladie provoque de nombreux symptômes tels que des troubles du rythme cardiaque, des baisses de tensions et une absence de menstruation[3]. Dans certains cas extrêmes elle peut même conduire à une dégénérescence osseuse, l’ostéoporose. Cependant, la cause principale de mortalité liée à cette maladie est le suicide qui atteint près de la moitié des patients décédés.
 Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans réussissent à en guérir et 50% des adolescents pris en charge parviennent à s’en sortir [4]. 
 </string>
                                                             <attributes>
-                                                                <color key="NSColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="24" name="BluuNext-Bold"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.3" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -441,22 +490,27 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="8j1-cD-j9S" secondAttribute="trailing" constant="20" id="H5z-mS-uFj"/>
-                                                <constraint firstItem="8j1-cD-j9S" firstAttribute="top" secondItem="dKQ-Hc-KBg" secondAttribute="top" constant="11" id="N3I-n6-A5o"/>
-                                                <constraint firstItem="8j1-cD-j9S" firstAttribute="centerX" secondItem="dKQ-Hc-KBg" secondAttribute="centerX" id="SQs-eP-6Lv"/>
-                                                <constraint firstItem="8j1-cD-j9S" firstAttribute="leading" secondItem="dKQ-Hc-KBg" secondAttribute="leading" constant="20" id="f4Y-XZ-lXb"/>
+                                                <constraint firstItem="aeh-VA-dfj" firstAttribute="centerX" secondItem="fUr-qw-r4b" secondAttribute="centerX" id="Poa-fc-JjH"/>
+                                                <constraint firstItem="aeh-VA-dfj" firstAttribute="top" secondItem="fUr-qw-r4b" secondAttribute="top" constant="50" id="bLL-Yw-kRY"/>
+                                                <constraint firstItem="aeh-VA-dfj" firstAttribute="leading" secondItem="fUr-qw-r4b" secondAttribute="leading" constant="150" id="k5E-j0-bvt"/>
+                                                <constraint firstAttribute="trailing" secondItem="aeh-VA-dfj" secondAttribute="trailing" constant="150" id="xr1-aI-7er"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="textView" destination="8j1-cD-j9S" id="p2g-h5-gzB"/>
+                                            <outlet property="leftMargin" destination="k5E-j0-bvt" id="3vw-CY-1aV"/>
+                                            <outlet property="rightMargin" destination="xr1-aI-7er" id="8Ll-2J-ojb"/>
+                                            <outlet property="textView" destination="aeh-VA-dfj" id="cQw-kY-7ag"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1M7-Ut-jNV">
-                                <rect key="frame" x="974" y="44" width="30" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="x">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1M7-Ut-jNV">
+                                <rect key="frame" x="956" y="47" width="48" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1M7-Ut-jNV" secondAttribute="height" multiplier="24:25" id="f1p-Cq-OeQ"/>
+                                    <constraint firstAttribute="width" constant="48" id="oUm-e4-cT6"/>
+                                </constraints>
+                                <state key="normal" title="x" image="close_white">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -465,12 +519,12 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.77070514899999998" green="0.070052632749999996" blue="0.16050450769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.77254901960784317" green="0.070588235294117646" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="kQN-ra-aMN" firstAttribute="leading" secondItem="o5W-nu-RNw" secondAttribute="leading" id="0mC-2P-SmD"/>
+                            <constraint firstItem="1M7-Ut-jNV" firstAttribute="centerY" secondItem="60E-Ak-i6E" secondAttribute="centerY" id="3aE-nT-GZz"/>
                             <constraint firstItem="kQN-ra-aMN" firstAttribute="centerX" secondItem="o5W-nu-RNw" secondAttribute="centerX" id="5kv-Cr-JEd"/>
                             <constraint firstItem="o5W-nu-RNw" firstAttribute="bottom" secondItem="kQN-ra-aMN" secondAttribute="bottom" id="7uc-Vi-P98"/>
-                            <constraint firstItem="kQN-ra-aMN" firstAttribute="top" secondItem="1M7-Ut-jNV" secondAttribute="bottom" constant="23" id="JcZ-mc-kqs"/>
                             <constraint firstItem="60E-Ak-i6E" firstAttribute="top" secondItem="o5W-nu-RNw" secondAttribute="top" constant="20" id="PRI-GG-M2n"/>
                             <constraint firstItem="kQN-ra-aMN" firstAttribute="top" secondItem="60E-Ak-i6E" secondAttribute="bottom" constant="23" id="XPR-ke-Le6"/>
                             <constraint firstItem="o5W-nu-RNw" firstAttribute="trailing" secondItem="1M7-Ut-jNV" secondAttribute="trailing" constant="20" id="a8N-bV-DHY"/>
@@ -480,122 +534,21 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
                         <viewLayoutGuide key="safeArea" id="o5W-nu-RNw"/>
                     </view>
                     <connections>
+                        <outlet property="closeIconWidth" destination="oUm-e4-cT6" id="l5T-oa-izk"/>
                         <outlet property="contentTableView" destination="kQN-ra-aMN" id="eyB-E5-cGR"/>
+                        <outlet property="titleTextView" destination="60E-Ak-i6E" id="ZVn-bE-lcB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qR9-6b-dft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3164" y="-263"/>
-        </scene>
-        <!--History Article View Controller-->
-        <scene sceneID="EWu-SX-cSm">
-            <objects>
-                <viewController id="p7u-AV-UM7" customClass="HistoryArticleViewController" customModule="DiktatBeauty" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5No-Tj-KsG">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFI-XH-Y3K">
-                                <rect key="frame" x="0.0" y="131" width="1024" height="821.5"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anorexia__poster" translatesAutoresizingMaskIntoConstraints="NO" id="rxb-l0-4Rl">
-                                        <rect key="frame" x="-103" y="116" width="602" height="849"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="602" id="EyL-cv-g1r"/>
-                                            <constraint firstAttribute="height" constant="849" id="PGQ-1h-V7y"/>
-                                            <constraint firstAttribute="width" secondItem="rxb-l0-4Rl" secondAttribute="height" multiplier="602:849" id="fIa-Jw-Tl8"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QsY-Da-EJ7">
-                                        <rect key="frame" x="526" y="10" width="469" height="1170"/>
-                                        <attributedString key="attributedText">
-                                            <fragment>
-                                                <string key="content">L’anorexie mentale est l’un des plus grand fléau touchant les adolescents occidentaux de 14 à 17 ans. Cette maladie touche majoritairement les adolescentes, en effet, neuf cas sur dix sont des filles[1]. Elle se manifeste par des troubles alimentaires (boulimie, refus de s’alimenter, vomissements volontaires…)et dure en moyenne entre un an et demi et trois ans[1]. Une hyperactivité intellectuelle et physique peut également se manifester. Cette pathologie psychologique est la cause principale de mortalité chez les jeunes. En effet, aucun traitement curatif définitif n’existe encore [2]. De plus, 5 à 15% des patients finissent par en décéder. Cette maladie provoque de nombreux symptômes tels que des troubles du rythme cardiaque, des baisses de tensions et une absence de menstruation[3]. Dans certains cas extrêmes elle peut même conduire à une dégénérescence osseuse, l’ostéoporose. Cependant, la cause principale de mortalité liée à cette maladie est le suicide qui atteint près de la moitié des patients décédés.
-Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans réussissent à en guérir et 50% des adolescents pris en charge parviennent à s’en sortir [4]. 
-</string>
-                                                <attributes>
-                                                    <color key="NSColor" red="0.16900097150259064" green="0.16900097150259064" blue="0.16900097150259064" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <font key="NSFont" size="22" name="BluuNext-Bold"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maquillage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JV-vV-OZg">
-                                        <rect key="frame" x="127" y="27" width="1108" height="137"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="1108" id="OpQ-8p-vZ3"/>
-                                            <constraint firstAttribute="height" constant="137" id="de4-f5-QZ4"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="100"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="7JV-vV-OZg" firstAttribute="top" secondItem="dFI-XH-Y3K" secondAttribute="top" constant="27" id="0bS-ak-hrB"/>
-                                    <constraint firstItem="7JV-vV-OZg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dFI-XH-Y3K" secondAttribute="leading" constant="20" symbolic="YES" id="7La-4U-xYr"/>
-                                    <constraint firstItem="rxb-l0-4Rl" firstAttribute="top" secondItem="dFI-XH-Y3K" secondAttribute="top" constant="116" id="Mn9-7P-nBN"/>
-                                    <constraint firstItem="QsY-Da-EJ7" firstAttribute="top" secondItem="dFI-XH-Y3K" secondAttribute="top" constant="10" id="YfZ-wc-G4G"/>
-                                    <constraint firstAttribute="trailing" secondItem="7JV-vV-OZg" secondAttribute="trailing" constant="-211" id="ZAC-jO-GBi"/>
-                                    <constraint firstItem="QsY-Da-EJ7" firstAttribute="leading" secondItem="rxb-l0-4Rl" secondAttribute="trailing" constant="27" id="aFR-8Z-zTs"/>
-                                    <constraint firstAttribute="bottom" secondItem="QsY-Da-EJ7" secondAttribute="bottom" constant="-358.5" id="qlH-gx-97f"/>
-                                    <constraint firstAttribute="trailing" secondItem="QsY-Da-EJ7" secondAttribute="trailing" constant="29" id="sUa-2G-N9X"/>
-                                </constraints>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maquillage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrD-gj-gfa">
-                                <rect key="frame" x="390" y="60" width="244" height="58"/>
-                                <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="48"/>
-                                <color key="textColor" red="0.95686274510000002" green="0.1450980392" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BC-dB-WcC">
-                                <rect key="frame" x="944" y="60" width="48" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="6BC-dB-WcC" secondAttribute="height" multiplier="24:25" id="h1F-jh-aZk"/>
-                                    <constraint firstAttribute="width" constant="48" id="y1Q-d1-kuk"/>
-                                </constraints>
-                                <state key="normal" title="x" image="close"/>
-                                <connections>
-                                    <action selector="close:" destination="p7u-AV-UM7" eventType="touchUpInside" id="tsU-Jb-sDG"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="6BC-dB-WcC" firstAttribute="top" secondItem="3ja-yP-aeb" secondAttribute="top" constant="36" id="35e-O9-6hE"/>
-                            <constraint firstItem="dFI-XH-Y3K" firstAttribute="leading" secondItem="3ja-yP-aeb" secondAttribute="leading" id="50L-hh-DYp"/>
-                            <constraint firstItem="3ja-yP-aeb" firstAttribute="bottom" secondItem="rxb-l0-4Rl" secondAttribute="bottom" constant="250" id="ApM-b7-nct"/>
-                            <constraint firstItem="3ja-yP-aeb" firstAttribute="leading" secondItem="rxb-l0-4Rl" secondAttribute="leading" constant="103" id="ETI-wr-Nk9"/>
-                            <constraint firstItem="3ja-yP-aeb" firstAttribute="bottom" secondItem="dFI-XH-Y3K" secondAttribute="bottom" constant="393.5" id="Kyz-IG-kjL"/>
-                            <constraint firstItem="DrD-gj-gfa" firstAttribute="centerX" secondItem="3ja-yP-aeb" secondAttribute="centerX" id="Ld4-uy-4dn"/>
-                            <constraint firstItem="dFI-XH-Y3K" firstAttribute="top" secondItem="DrD-gj-gfa" secondAttribute="bottom" constant="13" id="UDf-xc-NRD"/>
-                            <constraint firstItem="3ja-yP-aeb" firstAttribute="trailing" secondItem="6BC-dB-WcC" secondAttribute="trailing" constant="32" id="ZMU-A5-FBB"/>
-                            <constraint firstItem="3ja-yP-aeb" firstAttribute="trailing" secondItem="dFI-XH-Y3K" secondAttribute="trailing" id="fa5-Ld-7x2"/>
-                            <constraint firstItem="DrD-gj-gfa" firstAttribute="top" secondItem="3ja-yP-aeb" secondAttribute="top" constant="36" id="gzE-QU-aMh"/>
-                            <constraint firstItem="6BC-dB-WcC" firstAttribute="width" secondItem="5No-Tj-KsG" secondAttribute="height" multiplier="24:683" id="mbo-Q3-WQS"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="3ja-yP-aeb"/>
-                    </view>
-                    <connections>
-                        <outlet property="articleText" destination="QsY-Da-EJ7" id="35X-RE-83c"/>
-                        <outlet property="mainTitle" destination="DrD-gj-gfa" id="tgB-Lh-CXH"/>
-                        <outlet property="posterImageView" destination="rxb-l0-4Rl" id="nAs-yw-UQ3"/>
-                        <outlet property="transparentTitle" destination="7JV-vV-OZg" id="v3g-OX-Dlb"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ud4-lK-7As" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2252.9296875" y="178.77013177159589"/>
+            <point key="canvasLocation" x="3163.4765625" y="-263.10395314787701"/>
         </scene>
     </scenes>
     <resources>
-        <image name="anorexia__poster" width="3508" height="4961"/>
         <image name="circle_empty" width="2000" height="2000"/>
         <image name="circle_full" width="2000" height="2000"/>
         <image name="close" width="2000" height="2000"/>
+        <image name="close_white" width="2000" height="2000"/>
         <image name="collection" width="2000" height="2000"/>
         <image name="details" width="2000" height="2000"/>
         <image name="maquillage__poster" width="1754" height="2481"/>
@@ -604,6 +557,6 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
         <image name="tutorial-3-0" width="2000" height="2000"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UMg-ea-nZm"/>
+        <segue reference="jNL-Wx-akW"/>
     </inferredMetricsTieBreakers>
 </document>
