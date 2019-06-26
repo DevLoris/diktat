@@ -11,10 +11,19 @@ import UIKit
 class HistoryCollectionViewCell: UICollectionViewCell { 
     
     
+    @IBOutlet weak var flouEffect: UIVisualEffectView!
+    
+    @IBOutlet weak var labelDiscover: UILabel!
+    
     @IBOutlet weak var posterImageView: UIImageView!
     
     public func populateWith(value:ImageNode) {
         print("pop" + value.identifier)
+        
+        if(Historized.instance.viewed[value.identifier] != nil) {
+            labelDiscover.isHidden = true
+            flouEffect.isHidden = true
+        }
         
         populateImageFrom(id: value.identifier)
     }

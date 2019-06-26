@@ -299,8 +299,8 @@
                                                     </view>
                                                     <blurEffect style="dark"/>
                                                 </visualEffectView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À découvrir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-Ea-vvX">
-                                                    <rect key="frame" x="48" y="90.5" width="109" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="À découvrir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-Ea-vvX">
+                                                    <rect key="frame" x="48" y="91.5" width="109" height="24"/>
                                                     <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -325,6 +325,8 @@
                                             <constraint firstItem="MA6-5e-cWj" firstAttribute="top" secondItem="V1Y-AY-MUe" secondAttribute="top" id="zb6-0a-1Pe"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="flouEffect" destination="Ppc-iR-Agl" id="SPh-PI-zAl"/>
+                                            <outlet property="labelDiscover" destination="tdQ-Ea-vvX" id="3fP-Vd-30t"/>
                                             <outlet property="posterImageView" destination="MA6-5e-cWj" id="WEo-rl-ayO"/>
                                         </connections>
                                     </collectionViewCell>
@@ -408,7 +410,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquillage__poster" translatesAutoresizingMaskIntoConstraints="NO" id="z1u-jr-4iz">
-                                                    <rect key="frame" x="150" y="50" width="114" height="164.5"/>
+                                                    <rect key="frame" x="150" y="50" width="724" height="1044.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="z1u-jr-4iz" secondAttribute="height" multiplier="52:75" id="kdF-nA-NfV"/>
                                                     </constraints>
@@ -437,7 +439,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j1-cD-j9S">
-                                                    <rect key="frame" x="150" y="0.0" width="114" height="64.5"/>
+                                                    <rect key="frame" x="150" y="0.0" width="724" height="64.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment content="L'anorexie mentale">
                                                             <attributes>
@@ -473,7 +475,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-VA-dfj">
-                                                    <rect key="frame" x="150" y="50" width="114" height="6006.5"/>
+                                                    <rect key="frame" x="150" y="50" width="724" height="802.5"/>
                                                     <attributedString key="attributedText">
                                                         <fragment>
                                                             <string key="content">L’anorexie mentale est l’un des plus grand fléau touchant les adolescents occidentaux de 14 à 17 ans. Cette maladie touche majoritairement les adolescentes, en effet, neuf cas sur dix sont des filles[1]. Elle se manifeste par des troubles alimentaires (boulimie, refus de s’alimenter, vomissements volontaires…)et dure en moyenne entre un an et demi et trois ans[1]. Une hyperactivité intellectuelle et physique peut également se manifester. Cette pathologie psychologique est la cause principale de mortalité chez les jeunes. En effet, aucun traitement curatif définitif n’existe encore [2]. De plus, 5 à 15% des patients finissent par en décéder. Cette maladie provoque de nombreux symptômes tels que des troubles du rythme cardiaque, des baisses de tensions et une absence de menstruation[3]. Dans certains cas extrêmes elle peut même conduire à une dégénérescence osseuse, l’ostéoporose. Cependant, la cause principale de mortalité liée à cette maladie est le suicide qui atteint près de la moitié des patients décédés.
