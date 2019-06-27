@@ -12,8 +12,6 @@ import ARKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var detailsButton: UIButton!
-    
     @IBOutlet weak var sceneView: ARSCNView!
     
     // Timer used for the images reset after X seconds (if out of screen)
@@ -50,25 +48,5 @@ class ViewController: UIViewController {
     }
     
     var isRestartAvailable = true
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard
-            segue.identifier == "fromARToDetails",
-            let destinationViewController = segue.destination as? HistoryArticleViewController,
-            let actual = actualNode
-        else {
-                return
-        }
-        
-        
-        destinationViewController.node = Recognitazed.instance.nodes[actual] 
-    }
-    
-    @IBAction func openDetailsFromAR(_ sender: Any) {
-        //fromARToDetails
-        performSegue(withIdentifier: "fromARToDetails", sender: self)
-    }
-    
 }
 
