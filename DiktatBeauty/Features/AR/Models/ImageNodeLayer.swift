@@ -21,7 +21,7 @@ class ImageNodeLayer: CustomNodeLayer {
         let scenePlane = SCNPlane(width: parent.physicalSize.width, height: parent.physicalSize.height, withMaterial: material)
         
         // Create the node
-        let planeNode = getPlaneNode(scenePlane: scenePlane, parent: parent)
+        let planeNode = getPlaneNode(withGeometry: scenePlane, parent: parent)
         planeNode.eulerAngles.x = -.pi / 2
         
         // Create animation and run action

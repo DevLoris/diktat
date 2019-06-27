@@ -13,6 +13,7 @@
 		9A10306622BA6F2300CB80CF /* makeup_woman_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */; };
 		9A4D624B22C1595000D81963 /* HistorySubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */; };
 		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
+		9A997BED22C372E2003AB93B /* TextNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A997BEC22C372E2003AB93B /* TextNodeLayer.swift */; };
 		9ABD91E622BB905F000E0DAD /* anorexia_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E522BB905F000E0DAD /* anorexia_title.gif */; };
 		9ABD91E822BBC9AE000E0DAD /* makeup_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */; };
 		9AC1FA5F22BA083E003FD733 /* SCNMaterial+ImageInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1FA5E22BA083E003FD733 /* SCNMaterial+ImageInit.swift */; };
@@ -84,6 +85,7 @@
 		9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_woman_mirror.gif; sourceTree = "<group>"; };
 		9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+Color.swift"; sourceTree = "<group>"; };
+		9A997BEC22C372E2003AB93B /* TextNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNodeLayer.swift; sourceTree = "<group>"; };
 		9ABD91E522BB905F000E0DAD /* anorexia_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anorexia_title.gif; sourceTree = "<group>"; };
 		9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_title.gif; sourceTree = "<group>"; };
 		9AC1FA5E22BA083E003FD733 /* SCNMaterial+ImageInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+ImageInit.swift"; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */,
 				9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */,
 				D210364A22BA576C00C03949 /* ScanParticleNodeLayer.swift */,
+				9A997BEC22C372E2003AB93B /* TextNodeLayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
 				D24455B8228BEB3000096BE5 /* TouchEvent.swift in Sources */,
 				9AD7A01022BA169E00ACA73D /* SCNNode+FullInit.swift in Sources */,
+				9A997BED22C372E2003AB93B /* TextNodeLayer.swift in Sources */,
 				D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -876,14 +880,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5P2JB4N3W3;
+				DEVELOPMENT_TEAM = DSXB7SLR55;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeauty;
+				PRODUCT_BUNDLE_IDENTIFIER = duval.dev.DiktatBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -896,14 +900,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5P2JB4N3W3;
+				DEVELOPMENT_TEAM = DSXB7SLR55;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeauty;
+				PRODUCT_BUNDLE_IDENTIFIER = duval.dev.DiktatBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
