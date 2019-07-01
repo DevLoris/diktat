@@ -221,24 +221,10 @@
                                     <segue destination="ADZ-gk-fqn" kind="presentation" id="Hpv-Bu-4yO"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYB-vo-zMy">
-                                <rect key="frame" x="20" y="1262" width="84" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="Mgu-ad-oil"/>
-                                    <constraint firstAttribute="height" constant="84" id="d7p-PO-VEL"/>
-                                </constraints>
-                                <state key="normal" title="COLLECTION" image="details"/>
-                                <connections>
-                                    <action selector="openDetailsFromAR:" destination="BYZ-38-t0r" eventType="touchUpInside" id="utz-Yc-CUA"/>
-                                    <segue destination="GA2-hp-bkH" kind="presentation" identifier="fromARToDetails" id="5tS-y4-oS6"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bg5-Pu-kFc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="B4Q-dp-G7B"/>
-                            <constraint firstItem="SYB-vo-zMy" firstAttribute="leading" secondItem="bg5-Pu-kFc" secondAttribute="leading" constant="20" id="Lgu-JI-rIM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SYB-vo-zMy" secondAttribute="bottom" id="NOl-dv-zrV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="bg5-Pu-kFc" secondAttribute="top" constant="44" id="Yj7-KU-MDr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bg5-Pu-kFc" secondAttribute="trailing" id="eRL-HM-n97"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hHA-yw-bgg" secondAttribute="bottom" id="ijy-Ht-mRy"/>
@@ -249,7 +235,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="MsA-Xo-yfZ"/>
                     <connections>
-                        <outlet property="detailsButton" destination="SYB-vo-zMy" id="DCs-bu-wKQ"/>
                         <outlet property="sceneView" destination="bg5-Pu-kFc" id="wh7-zX-NpY"/>
                     </connections>
                 </viewController>
@@ -552,13 +537,9 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
         <image name="close" width="2000" height="2000"/>
         <image name="close_white" width="2000" height="2000"/>
         <image name="collection" width="2000" height="2000"/>
-        <image name="details" width="2000" height="2000"/>
         <image name="maquillage__poster" width="1754" height="2481"/>
         <image name="tutorial-1-0" width="2000" height="2000"/>
         <image name="tutorial-2-0" width="2000" height="2000"/>
         <image name="tutorial-3-0" width="2000" height="2000"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="jNL-Wx-akW"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -47,14 +47,14 @@ class HistoryViewController: UIViewController {
 
 
 
-extension HistoryViewController:UICollectionViewDelegate {
+extension HistoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         clickedItem = indexPath.item
         self.performSegue(withIdentifier: "toHistoryDetails", sender: self)
     }
 }
 
-extension HistoryViewController : UICollectionViewDelegateFlowLayout {
+extension HistoryViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }

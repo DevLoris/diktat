@@ -41,21 +41,19 @@ class HistoryDetailsViewController: UIViewController, UITableViewDelegate, UITab
         return 3;
     }
     
+    // Adapt table cells height according to device type
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Poster table cell
         if indexPath.row == 0 {
-            var margins: CGFloat;
-            
             switch UIDevice.current.userInterfaceIdiom {
             case .pad:
-                margins = 150
-                break
+                return (75 / 52) * (tableView.bounds.width - 300) - 50
             default:
-                margins = 10
+                return (75 / 52) * (tableView.bounds.width - 20) - 50
             }
-            
-            return (75/52) * (tableView.bounds.width - margins*2) - 50
         }
         
+        // Title table cell
         if indexPath.row == 1 {
             switch UIDevice.current.userInterfaceIdiom {
             case .pad:
@@ -65,41 +63,14 @@ class HistoryDetailsViewController: UIViewController, UITableViewDelegate, UITab
             }
         }
         
+        // Text table cell
         return 1000
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
+        guard let n = node else { return UITableViewCell() }
         
-        guard let n = node else { return cell }
-            
-        if indexPath.row == 0 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "posterCell", for: indexPath)
-            
-            if let c = cell as? HistoryPosterTableViewCell {
-                c.populateWith(value: n)
-            }
-            
-            return cell
-        }
-        
-        if indexPath.row == 1 {
-            cell = tableView.dequeueReusableCell(withIdentifier: "subtitleCell", for: indexPath)
-            
-            if let c = cell as? HistorySubtitleTableViewCell {
-                c.populateWith(value: n)
-            }
-            
-            return cell
-        }
-        
-        cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath)
-        
-        if let c = cell as? HistoryTextTableViewCell {
-            c.populateWith(value: n)
-        }
-        
-        return cell
+        return HistoryDetailsViewHelper.createAndPopulateCell(indexPath: indexPath, tableView: tableView, node: n)
     }
     
     

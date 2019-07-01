@@ -18,8 +18,6 @@ class HistoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     
     public func populateWith(value:ImageNode) {
-        print("pop" + value.identifier)
-        
         if(Historized.instance.viewed[value.identifier] != nil) {
             labelDiscover.isHidden = true
             flouEffect.isHidden = true

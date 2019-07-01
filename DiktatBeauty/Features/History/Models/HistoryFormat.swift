@@ -9,8 +9,8 @@
 import Foundation
 
 struct HistoryFormat {
-    var identifier:String
-    var title:String
-    var text:String
-    var links:[String]
+    var identifier: String
+    var title: String
+    var text: String
+    var links: [String]
 }
