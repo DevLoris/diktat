@@ -6,7 +6,7 @@ Stocke les images déjà vu lors de l'expérience, pour pouvoir les retrouver da
 class Historized {
     static let instance = Historized()
     
-    var viewed:[String:ImageNode] = [:];
+    var viewed: [String:ImageNode] = [:];
     
     func addViewedPoster(_ node: ImageNode) {
         self.viewed[node.identifier] = node

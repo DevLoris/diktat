@@ -50,25 +50,5 @@ class ViewController: UIViewController {
     }
     
     var isRestartAvailable = true
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard
-            segue.identifier == "fromARToDetails",
-            let destinationViewController = segue.destination as? HistoryArticleViewController,
-            let actual = actualNode
-        else {
-                return
-        }
-        
-        
-        destinationViewController.node = Recognitazed.instance.nodes[actual] 
-    }
-    
-    @IBAction func openDetailsFromAR(_ sender: Any) {
-        //fromARToDetails
-        performSegue(withIdentifier: "fromARToDetails", sender: self)
-    }
-    
 }
 
