@@ -6,9 +6,10 @@
 
 **[Visit website](https://diktat.netlify.com/)** 
 
+
 ## Features 
 - Posters detections using AR Resource 
-- 2D AR layers (pictures, GIFs and videos)
+- 2D AR layers (pictures, particles, GIFs and videos)
 - Building posters using JSON files hosted online
 - History containing all the previously scanned posters
 - Tutorial when launching of the app
@@ -16,7 +17,9 @@
 
 #### Next implementations
 - Animations on posters
-- Particles layers
+
+#### Documentation
+**[Read documentation about layers](https://github.com/DevLoris/gobelins_beauty/wiki)** 
 
 ---
 ## Prerequisites
