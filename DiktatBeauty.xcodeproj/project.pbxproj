@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		0830474315252ABA7B9A457F /* Pods_DiktatBeauty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */; };
 		64BB44E93F7B634818FEF4C5 /* Pods_DiktatBeautyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */; };
+		9A031CD122CB49E300DA4CA4 /* tanning_fire.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A031CD022CB49E300DA4CA4 /* tanning_fire.gif */; };
+		9A031CD322CB5C2A00DA4CA4 /* makeup_woman_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A031CD222CB5C2A00DA4CA4 /* makeup_woman_mirror.gif */; };
 		9A10306422BA631000CB80CF /* makeup_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306322BA631000CB80CF /* makeup_mirror.gif */; };
-		9A10306622BA6F2300CB80CF /* makeup_woman_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */; };
 		9A4D624B22C1595000D81963 /* HistorySubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */; };
 		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
 		9A7AD48322C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AD48222C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift */; };
@@ -22,7 +23,6 @@
 		9AD7A01322BA210D00ACA73D /* GifHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A01222BA210D00ACA73D /* GifHelper.swift */; };
 		9AF2BAFE22B406FB00D9D48C /* ParticlesNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */; };
 		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
-		D210364422BA214000C03949 /* HistoryArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D210364322BA214000C03949 /* HistoryArticleViewController.swift */; };
 		D210364722BA558800C03949 /* ScannedParticles.scnp in Resources */ = {isa = PBXBuildFile; fileRef = D210364522BA558800C03949 /* ScannedParticles.scnp */; };
 		D210364822BA558800C03949 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = D210364622BA558800C03949 /* star.png */; };
 		D210364B22BA576C00C03949 /* ScanParticleNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D210364A22BA576C00C03949 /* ScanParticleNodeLayer.swift */; };
@@ -81,8 +81,9 @@
 		2568586EE8266140767B4E0C /* Pods-DiktatBeautyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.release.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.release.xcconfig"; sourceTree = "<group>"; };
 		371499767E24326B33A66AF4 /* Pods_DiktatBeautyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeautyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD51684F72013C0FA937457 /* Pods-DiktatBeautyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeautyTests.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeautyTests/Pods-DiktatBeautyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A031CD022CB49E300DA4CA4 /* tanning_fire.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tanning_fire.gif; sourceTree = "<group>"; };
+		9A031CD222CB5C2A00DA4CA4 /* makeup_woman_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_woman_mirror.gif; sourceTree = "<group>"; };
 		9A10306322BA631000CB80CF /* makeup_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_mirror.gif; sourceTree = "<group>"; };
-		9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_woman_mirror.gif; sourceTree = "<group>"; };
 		9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+Color.swift"; sourceTree = "<group>"; };
 		9A7AD48222C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewHelper.swift; sourceTree = "<group>"; };
@@ -96,7 +97,6 @@
 		B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeauty.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+TouchEvent.swift"; sourceTree = "<group>"; };
-		D210364322BA214000C03949 /* HistoryArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryArticleViewController.swift; sourceTree = "<group>"; };
 		D210364522BA558800C03949 /* ScannedParticles.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = ScannedParticles.scnp; sourceTree = "<group>"; };
 		D210364622BA558800C03949 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		D210364A22BA576C00C03949 /* ScanParticleNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanParticleNodeLayer.swift; sourceTree = "<group>"; };
@@ -184,9 +184,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9A031CCF22CB49AD00DA4CA4 /* Tanning */ = {
+			isa = PBXGroup;
+			children = (
+				9A031CD022CB49E300DA4CA4 /* tanning_fire.gif */,
+			);
+			path = Tanning;
+			sourceTree = "<group>";
+		};
 		9A10305E22BA5C7200CB80CF /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
+				9A031CCF22CB49AD00DA4CA4 /* Tanning */,
 				9ABD91E422BB904A000E0DAD /* Anorexia */,
 				9ABD91E322BB748A000E0DAD /* Makeup */,
 			);
@@ -217,7 +226,7 @@
 			children = (
 				9A10306322BA631000CB80CF /* makeup_mirror.gif */,
 				9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */,
-				9A10306522BA6F2300CB80CF /* makeup_woman_mirror.gif */,
+				9A031CD222CB5C2A00DA4CA4 /* makeup_woman_mirror.gif */,
 			);
 			path = Makeup;
 			sourceTree = "<group>";
@@ -452,7 +461,6 @@
 			children = (
 				D2F176F522992D75007D4841 /* HistoryViewController.swift */,
 				D289EB9522A7B26D0089B56B /* HistoryDetailsViewController.swift */,
-				D210364322BA214000C03949 /* HistoryArticleViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -583,13 +591,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A031CD322CB5C2A00DA4CA4 /* makeup_woman_mirror.gif in Resources */,
+				9A031CD122CB49E300DA4CA4 /* tanning_fire.gif in Resources */,
 				9A10306422BA631000CB80CF /* makeup_mirror.gif in Resources */,
 				D2D0D9F6228AAFA400B32B24 /* test.gif in Resources */,
 				9ABD91E622BB905F000E0DAD /* anorexia_title.gif in Resources */,
 				D210364822BA558800C03949 /* star.png in Resources */,
 				D2F176F4229927CD007D4841 /* BluuNext-Bolditalic.otf in Resources */,
 				D28594F42265CBF500A967C8 /* LaunchScreen.storyboard in Resources */,
-				9A10306622BA6F2300CB80CF /* makeup_woman_mirror.gif in Resources */,
 				D29A277F22AA93BC00216D5C /* Particles.scnp in Resources */,
 				9ABD91E822BBC9AE000E0DAD /* makeup_title.gif in Resources */,
 				D29A277E22AA93BC00216D5C /* spark.png in Resources */,
@@ -717,7 +726,6 @@
 				D24455C8228BF79200096BE5 /* NodeObject.swift in Sources */,
 				D24455BA228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift in Sources */,
 				9A4D624B22C1595000D81963 /* HistorySubtitleTableViewCell.swift in Sources */,
-				D210364422BA214000C03949 /* HistoryArticleViewController.swift in Sources */,
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
@@ -888,14 +896,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5P2JB4N3W3;
+				DEVELOPMENT_TEAM = DSXB7SLR55;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeauty;
+				PRODUCT_BUNDLE_IDENTIFIER = duval.dev.DiktatBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -908,14 +916,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5P2JB4N3W3;
+				DEVELOPMENT_TEAM = DSXB7SLR55;
 				INFOPLIST_FILE = DiktatBeauty/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pinna.dev.DiktatBeauty;
+				PRODUCT_BUNDLE_IDENTIFIER = duval.dev.DiktatBeauty;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

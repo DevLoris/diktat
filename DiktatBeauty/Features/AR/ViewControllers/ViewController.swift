@@ -11,8 +11,6 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var detailsButton: UIButton!
     
     @IBOutlet weak var sceneView: ARSCNView!
     
@@ -33,8 +31,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        let availablePosters = ["makeup", "anorexia"]
+        
+        let availablePosters = ["makeup", "anorexia", "tanning"]
         
         // Load all available posters as from the api's JSONs
         availablePosters.forEach { (name) in
