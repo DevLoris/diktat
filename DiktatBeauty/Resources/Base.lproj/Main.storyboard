@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m8Z-ih-LXO">
-    <device id="ipad12_9rounded" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,23 +20,23 @@
             <objects>
                 <viewController id="m8Z-ih-LXO" customClass="TutorialViewController" customModule="DiktatBeauty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5P-u1-kFk">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LbP-ly-gXx">
-                                <rect key="frame" x="0.0" y="147" width="1024" height="1120"/>
+                                <rect key="frame" x="0.0" y="167" width="414" height="616"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0h-Ts-wJK">
-                                        <rect key="frame" x="8" y="8" width="1008" height="1085"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="581"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial-2-0" translatesAutoresizingMaskIntoConstraints="NO" id="Ck7-cL-zot">
-                                                <rect key="frame" x="8" y="8" width="992" height="854.5"/>
+                                                <rect key="frame" x="8" y="8" width="382" height="329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Ck7-cL-zot" secondAttribute="height" multiplier="382:329" id="yJi-S1-nla"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intéragissez avec les affiches en appuyant dessus" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pum-99-fZc">
-                                                <rect key="frame" x="8" y="862.5" width="992" height="29"/>
+                                                <rect key="frame" x="8" y="337" width="382" height="57.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="0.16900097150000001" green="0.16900097150000001" blue="0.16900097150000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -52,16 +52,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEe-Vs-V85">
-                                        <rect key="frame" x="8" y="8" width="1008" height="1085"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="581"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relisez les dessous des diktats grâce à votre collection. Bonne exposition !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-VV-0Tc">
-                                                <rect key="frame" x="8" y="862.5" width="992" height="29"/>
+                                                <rect key="frame" x="8" y="337" width="382" height="86"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="0.1223283679" green="0.1223283679" blue="0.1223283679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial-3-0" translatesAutoresizingMaskIntoConstraints="NO" id="t0z-mP-QBQ">
-                                                <rect key="frame" x="8" y="8" width="992" height="854.5"/>
+                                                <rect key="frame" x="8" y="8" width="382" height="329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="t0z-mP-QBQ" secondAttribute="height" multiplier="382:329" id="HAe-Qh-kg0"/>
                                                 </constraints>
@@ -77,16 +77,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aBT-3E-Afg">
-                                        <rect key="frame" x="8" y="8" width="1008" height="1085"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="581"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tutorial-1-0" translatesAutoresizingMaskIntoConstraints="NO" id="W2M-eh-euf">
-                                                <rect key="frame" x="8" y="8" width="992" height="854.5"/>
+                                                <rect key="frame" x="8" y="8" width="382" height="329"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="W2M-eh-euf" secondAttribute="height" multiplier="382:329" id="Fq3-k9-z6Q"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baladez-vous autour des affiches pour découvrir la face cachée des diktats" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ls-8c-xw7">
-                                                <rect key="frame" x="8" y="862.5" width="992" height="29"/>
+                                                <rect key="frame" x="8" y="337" width="382" height="86"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="0.1223283679" green="0.1223283679" blue="0.1223283679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -119,26 +119,26 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="diktat." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMY-Al-a80">
-                                <rect key="frame" x="437.5" y="60" width="149" height="59"/>
+                                <rect key="frame" x="132.5" y="80" width="149" height="59"/>
                                 <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="49"/>
                                 <color key="textColor" red="0.67290722150000004" green="0.053295842760000003" blue="0.13405942279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_full" translatesAutoresizingMaskIntoConstraints="NO" id="E92-ja-a74">
-                                <rect key="frame" x="500" y="1298" width="24" height="24"/>
+                                <rect key="frame" x="195" y="814" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="AHe-GO-VBD"/>
                                     <constraint firstAttribute="height" constant="24" id="Mj4-cW-IVq"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_empty" translatesAutoresizingMaskIntoConstraints="NO" id="9xM-Kj-nyL">
-                                <rect key="frame" x="470" y="1298" width="24" height="24"/>
+                                <rect key="frame" x="165" y="814" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="YzG-6x-rAc"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle_empty" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-UW-UaQ">
-                                <rect key="frame" x="530" y="1298" width="24" height="24"/>
+                                <rect key="frame" x="225" y="814" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="74W-oA-ob3"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="7H8-mo-9ao"/>
@@ -147,7 +147,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TJ-hH-NKq">
-                                <rect key="frame" x="944" y="60" width="48" height="50"/>
+                                <rect key="frame" x="334" y="80" width="48" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7TJ-hH-NKq" secondAttribute="height" multiplier="24:25" id="QCj-14-XFV"/>
                                     <constraint firstAttribute="width" constant="48" id="xQY-xj-zas"/>
@@ -204,14 +204,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiktatBeauty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-Pu-kFc">
                                 <rect key="frame" x="0.0" y="-17" width="1024" height="1400"/>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHA-yw-bgg">
-                                <rect key="frame" x="920" y="1262" width="84" height="84"/>
+                                <rect key="frame" x="310" y="778" width="84" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="84" id="IPF-FD-wFe"/>
                                     <constraint firstAttribute="height" constant="84" id="Po6-yg-Z9M"/>
@@ -247,17 +247,17 @@
             <objects>
                 <viewController id="ADZ-gk-fqn" customClass="HistoryViewController" customModule="DiktatBeauty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3D4-42-1Zc">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4U-72-Fz0">
-                                <rect key="frame" x="396.5" y="60" width="231" height="59"/>
+                                <rect key="frame" x="91.5" y="80" width="231" height="59"/>
                                 <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="49"/>
                                 <color key="textColor" red="0.95686274510000002" green="0.1450980392" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1ZY-px-bUU">
-                                <rect key="frame" x="0.0" y="147" width="1024" height="1199"/>
+                                <rect key="frame" x="0.0" y="167" width="414" height="695"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="24N-fs-itY">
                                     <size key="itemSize" width="205" height="205"/>
@@ -267,7 +267,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="historyCollectionView" id="V1Y-AY-MUe" customClass="HistoryCollectionViewCell" customModule="DiktatBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="5" width="205" height="205"/>
+                                        <rect key="frame" x="104.5" y="5" width="205" height="205"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="205" height="205"/>
@@ -317,16 +317,16 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tdP-eu-hvz">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="v79-p4-sKU">
-                                    <rect key="frame" x="0.0" y="210" width="1024" height="5"/>
+                                    <rect key="frame" x="0.0" y="210" width="414" height="5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQU-Ka-ANs">
-                                <rect key="frame" x="944" y="64.5" width="48" height="50"/>
+                                <rect key="frame" x="334" y="84.5" width="48" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="48" id="NxF-as-fwn"/>
                                     <constraint firstAttribute="width" secondItem="OQU-Ka-ANs" secondAttribute="height" multiplier="24:25" id="daX-Uw-l66"/>
@@ -367,31 +367,31 @@
             <objects>
                 <viewController id="GA2-hp-bkH" customClass="HistoryDetailsViewController" customModule="DiktatBeauty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EOQ-f3-ch0">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maquillage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60E-Ak-i6E">
-                                <rect key="frame" x="395.5" y="44" width="233" height="55.5"/>
+                                <rect key="frame" x="90.5" y="64" width="233" height="55.5"/>
                                 <fontDescription key="fontDescription" name="BluuNext-Bold" family="Bluu Next" pointSize="46"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kQN-ra-aMN">
-                                <rect key="frame" x="0.0" y="122.5" width="1024" height="1223.5"/>
+                                <rect key="frame" x="0.0" y="142.5" width="414" height="719.5"/>
                                 <color key="backgroundColor" red="0.67290722150000004" green="0.053295842760000003" blue="0.13405942279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="20"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Mnd-g3-5h5">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="posterCell" rowHeight="323" id="QRK-a3-Ykk" customClass="HistoryPosterTableViewCell" customModule="DiktatBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="48" width="1024" height="323"/>
+                                        <rect key="frame" x="0.0" y="48" width="414" height="323"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QRK-a3-Ykk" id="pg5-ht-Zpn">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="322.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="322.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquillage__poster" translatesAutoresizingMaskIntoConstraints="NO" id="z1u-jr-4iz">
@@ -417,10 +417,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subtitleCell" rowHeight="105" id="5BS-4N-stU" userLabel="subtitleCell" customClass="HistorySubtitleTableViewCell" customModule="DiktatBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="371" width="1024" height="105"/>
+                                        <rect key="frame" x="0.0" y="371" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5BS-4N-stU" id="dKQ-Hc-KBg">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="104.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8j1-cD-j9S">
@@ -453,10 +453,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textCell" rowHeight="105" id="uGu-ip-eIv" customClass="HistoryTextTableViewCell" customModule="DiktatBeauty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="476" width="1024" height="105"/>
+                                        <rect key="frame" x="0.0" y="476" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uGu-ip-eIv" id="fUr-qw-r4b">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="104.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" contentInsetAdjustmentBehavior="never" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeh-VA-dfj">
@@ -492,7 +492,7 @@ Heureusement le tableau n’est pas tout noir, 2 cas sur 3 traités après 5 ans
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1M7-Ut-jNV">
-                                <rect key="frame" x="956" y="47" width="48" height="50"/>
+                                <rect key="frame" x="346" y="67" width="48" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1M7-Ut-jNV" secondAttribute="height" multiplier="24:25" id="f1p-Cq-OeQ"/>
                                     <constraint firstAttribute="width" constant="48" id="oUm-e4-cT6"/>
