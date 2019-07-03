@@ -3,7 +3,7 @@
 //  DiktatBeauty
 //
 //  Created by Hugo on 01/07/2019.
-//  Copyright © 2019 Loris Pinna. All rights reserved.
+//  Copyright © 2019 Hugo Duval. All rights reserved.
 //
 
 import Foundation
