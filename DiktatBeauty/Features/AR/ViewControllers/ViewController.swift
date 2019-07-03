@@ -11,7 +11,6 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController {
-
     @IBOutlet weak var sceneView: ARSCNView!
     
     // Timer used for the images reset after X seconds (if out of screen)
@@ -31,8 +30,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
-        let availablePosters = ["makeup", "anorexia"]
+        
+        let availablePosters = ["makeup", "anorexia", "tanning"]
         
         // Load all available posters as from the api's JSONs
         availablePosters.forEach { (name) in

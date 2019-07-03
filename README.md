@@ -6,6 +6,7 @@
 
 **[Visit website](https://diktat.netlify.com/)** 
 
+**[Read the documentation](https://github.com/DevLoris/diktat/wiki)**
 
 ## Features 
 - Posters detections using AR Resource 
@@ -18,24 +19,24 @@
 #### Next implementations
 - Animations on posters
 
-#### Documentation
-**[Read documentation about layers](https://github.com/DevLoris/gobelins_beauty/wiki)** 
-
 ---
 ## Prerequisites
-* Xcode >= 10.2
-* iOS >= 12.2 
+
+|  | Version |
+|------|------|
+| **Xcode** | `>= 10.2` |
+| **iOS** | `>= 12.2` | 
 
 ## Installation
 * Clone the repository
-```shell
-$ git clone https://github.com/DevLoris/gobelins_beauty.git
+```
+$ git clone https://github.com/DevLoris/diktat.git
 ```
 
 * Install pod dependencies
-```shell
+```
 $ pod install
 ```
 
 ---
-Produced at part of the **Bachelor Designer et Développeur Interactif** des **Gobelins, l'École de l'image.**
+Produced at part of the **Bachelor Designer et Développeur Interactif** from the school **Gobelins, l'École de l'image.**
