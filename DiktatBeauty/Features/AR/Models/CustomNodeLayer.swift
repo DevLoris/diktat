@@ -104,9 +104,9 @@ class CustomNodeLayer {
     }
     
     // Create a plane node using the NodeLayer properties
-    func getPlaneNode(scenePlane: SCNPlane, parent: ARReferenceImage) -> SCNNode {
+    func getPlaneNode(withGeometry: SCNGeometry, parent: ARReferenceImage) -> SCNNode {
         return SCNNode(
-            geometry: scenePlane,
+            geometry: withGeometry,
             opacity: CGFloat(self.opacity),
             position: self.position.getLayerPosition(parent: parent),
             rotation: self.rotation,

@@ -14,7 +14,7 @@
 		9A10306422BA631000CB80CF /* makeup_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306322BA631000CB80CF /* makeup_mirror.gif */; };
 		9A4D624B22C1595000D81963 /* HistorySubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */; };
 		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
-		9A7AD48322C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AD48222C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift */; };
+		8A7AD48322C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AD48222C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift */; };
 		9ABD91E622BB905F000E0DAD /* anorexia_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E522BB905F000E0DAD /* anorexia_title.gif */; };
 		9ABD91E822BBC9AE000E0DAD /* makeup_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */; };
 		9AC1FA5F22BA083E003FD733 /* SCNMaterial+ImageInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1FA5E22BA083E003FD733 /* SCNMaterial+ImageInit.swift */; };
@@ -404,6 +404,7 @@
 				D24455B9228BEB7700096BE5 /* CustomNodeLayer+TouchEvent.swift */,
 				9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */,
 				D210364A22BA576C00C03949 /* ScanParticleNodeLayer.swift */,
+				9A997BEC22C372E2003AB93B /* TextNodeLayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -732,6 +733,7 @@
 				9A7AD48322C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift in Sources */,
 				D24455B8228BEB3000096BE5 /* TouchEvent.swift in Sources */,
 				9AD7A01022BA169E00ACA73D /* SCNNode+FullInit.swift in Sources */,
+				9A997BED22C372E2003AB93B /* TextNodeLayer.swift in Sources */,
 				D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
