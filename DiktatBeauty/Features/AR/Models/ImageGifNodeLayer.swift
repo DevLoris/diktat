@@ -34,7 +34,7 @@ class ImageGifNodeLayer: CustomNodeLayer {
         )
         
         // Create the node
-        let planeNode = getPlaneNode(scenePlane: scenePlane, parent: parent)
+        let planeNode = getPlaneNode(withGeometry: scenePlane, parent: parent)
         planeNode.eulerAngles.x = -.pi / 2
         
         // Create animation and run action

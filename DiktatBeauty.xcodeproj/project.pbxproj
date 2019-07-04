@@ -14,13 +14,13 @@
 		9A10306422BA631000CB80CF /* makeup_mirror.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9A10306322BA631000CB80CF /* makeup_mirror.gif */; };
 		9A4D624B22C1595000D81963 /* HistorySubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */; };
 		9A74EF4722B8CA8F0060AF98 /* SCNMaterial+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */; };
-		9A7AD48322C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7AD48222C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift */; };
 		9ABD91E622BB905F000E0DAD /* anorexia_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E522BB905F000E0DAD /* anorexia_title.gif */; };
 		9ABD91E822BBC9AE000E0DAD /* makeup_title.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */; };
 		9AC1FA5F22BA083E003FD733 /* SCNMaterial+ImageInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1FA5E22BA083E003FD733 /* SCNMaterial+ImageInit.swift */; };
 		9AC1FA6122BA0970003FD733 /* SCNPlane+Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC1FA6022BA0970003FD733 /* SCNPlane+Material.swift */; };
 		9AD7A01022BA169E00ACA73D /* SCNNode+FullInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A00F22BA169E00ACA73D /* SCNNode+FullInit.swift */; };
 		9AD7A01322BA210D00ACA73D /* GifHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD7A01222BA210D00ACA73D /* GifHelper.swift */; };
+		9AEC464A22CD1D8600FD3048 /* HistoryDetailsViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC464922CD1D8600FD3048 /* HistoryDetailsViewHelper.swift */; };
 		9AF2BAFE22B406FB00D9D48C /* ParticlesNodeLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */; };
 		D201AADB227D697B00AD7139 /* ViewController+TouchEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D201AADA227D697B00AD7139 /* ViewController+TouchEvent.swift */; };
 		D210364722BA558800C03949 /* ScannedParticles.scnp in Resources */ = {isa = PBXBuildFile; fileRef = D210364522BA558800C03949 /* ScannedParticles.scnp */; };
@@ -86,13 +86,13 @@
 		9A10306322BA631000CB80CF /* makeup_mirror.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_mirror.gif; sourceTree = "<group>"; };
 		9A4D624A22C1595000D81963 /* HistorySubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySubtitleTableViewCell.swift; sourceTree = "<group>"; };
 		9A74EF4622B8CA8F0060AF98 /* SCNMaterial+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+Color.swift"; sourceTree = "<group>"; };
-		9A7AD48222C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewHelper.swift; sourceTree = "<group>"; };
 		9ABD91E522BB905F000E0DAD /* anorexia_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anorexia_title.gif; sourceTree = "<group>"; };
 		9ABD91E722BBC9AE000E0DAD /* makeup_title.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = makeup_title.gif; sourceTree = "<group>"; };
 		9AC1FA5E22BA083E003FD733 /* SCNMaterial+ImageInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNMaterial+ImageInit.swift"; sourceTree = "<group>"; };
 		9AC1FA6022BA0970003FD733 /* SCNPlane+Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNPlane+Material.swift"; sourceTree = "<group>"; };
 		9AD7A00F22BA169E00ACA73D /* SCNNode+FullInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+FullInit.swift"; sourceTree = "<group>"; };
 		9AD7A01222BA210D00ACA73D /* GifHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifHelper.swift; sourceTree = "<group>"; };
+		9AEC464922CD1D8600FD3048 /* HistoryDetailsViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailsViewHelper.swift; sourceTree = "<group>"; };
 		9AF2BAFD22B406FB00D9D48C /* ParticlesNodeLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticlesNodeLayer.swift; sourceTree = "<group>"; };
 		B8EA35818C8505AB0D22ECCB /* Pods-DiktatBeauty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiktatBeauty.debug.xcconfig"; path = "Target Support Files/Pods-DiktatBeauty/Pods-DiktatBeauty.debug.xcconfig"; sourceTree = "<group>"; };
 		C2DAF4292619A3BD8954AA3A /* Pods_DiktatBeauty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DiktatBeauty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,7 +216,7 @@
 		9A7AD48122C9F90B001E3FE6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9A7AD48222C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift */,
+				9AEC464922CD1D8600FD3048 /* HistoryDetailsViewHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -701,6 +701,7 @@
 				D28595032265CD7600A967C8 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				D2F176FC22992F23007D4841 /* HistoryFormat.swift in Sources */,
 				D210364B22BA576C00C03949 /* ScanParticleNodeLayer.swift in Sources */,
+				9AEC464A22CD1D8600FD3048 /* HistoryDetailsViewHelper.swift in Sources */,
 				D2F176F622992D75007D4841 /* HistoryViewController.swift in Sources */,
 				D289EB9822A7B2D00089B56B /* HistoryPosterTableViewCell.swift in Sources */,
 				D28595052265CD9800A967C8 /* ViewController+ARSessionDelegate.swift in Sources */,
@@ -729,7 +730,6 @@
 				D28595162265F89900A967C8 /* UnitConverter.swift in Sources */,
 				D285950A2265CEF000A967C8 /* ImageGifNodeLayer.swift in Sources */,
 				D28594EA2265CBF400A967C8 /* AppDelegate.swift in Sources */,
-				9A7AD48322C9F96D001E3FE6 /* HistoryDetailsViewHelper.swift in Sources */,
 				D24455B8228BEB3000096BE5 /* TouchEvent.swift in Sources */,
 				9AD7A01022BA169E00ACA73D /* SCNNode+FullInit.swift in Sources */,
 				D2D0D9F4228AA06A00B32B24 /* CustomNodeLayer.swift in Sources */,

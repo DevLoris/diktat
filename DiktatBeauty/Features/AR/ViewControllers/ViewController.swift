@@ -11,7 +11,6 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var sceneView: ARSCNView!
     
     // Timer used for the images reset after X seconds (if out of screen)

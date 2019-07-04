@@ -25,7 +25,7 @@ class ParticlesNodeLayer: CustomNodeLayer {
         let scenePlane = SCNPlane(width: parent.physicalSize.width, height: parent.physicalSize.height, withMaterial: material)
         
         // Create the plane node
-        let plane_node = getPlaneNode(scenePlane: scenePlane, parent: parent)
+        let plane_node = getPlaneNode(withGeometry: scenePlane, parent: parent)
         plane_node.eulerAngles.x = -.pi / 2
         
         // Create the particles system and set init values
