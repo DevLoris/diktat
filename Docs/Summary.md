@@ -1,12 +1,12 @@
 # Summary 
 
 * **The Project**
-  * [About the project](About-the-project)
+  * [About the project](About-the-project.md)
 * **Features**
-  * [AR](Feature-AR)
-  * [Loader](Feature-Loader)
-  * [History](Feature-History)
-  * [Tutorial](Feature-Tutorial)
+  * [AR](Feature-AR.md)
+  * [Loader](Feature-Loader.md)
+  * [History](Feature-History.md)
+  * [Tutorial](Feature-Tutorial.md)
 * **Posters**
-  *  [Add a new Poster](Add-a-new-Poster)
-  * [Layers position guideline](Layers-position-guideline)
+  *  [Add a new Poster](Add-a-new-Poster.md)
+  * [Layers position guideline](Layers-position-guideline.md)
